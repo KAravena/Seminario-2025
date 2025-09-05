@@ -1,0 +1,156 @@
+---
+lang: es
+format:
+  revealjs:
+    theme: "libs/edumer.scss"   # tu SCSS externo; no pegues CSS aquí
+    slide-number: true
+    navigationMode: linear
+    transition: fade
+---
+
+<div class="title-cover">
+
+  <img src="images/logo-sociales1.png" class="logo-inline" />
+
+  <h1><strong>Entre hogares<wbr> y escuelas:</strong></h1>
+
+  <p class="cover-subtitle"><strong>
+    Capital individual, composición escolar y mecanismos psicoeducativos en el rendimiento en Matemática
+  </strong></p>
+
+  <hr class="title-divider"/>
+
+  <p class="title-meta">
+    <strong>Katherine Aravena Herrera</strong><br>
+    Coloquio de Investigación en Justicia Distributiva y Desigualdad Socioeconómica<br>
+    10 Septiembre 2025, Santiago
+  </p>
+
+</div>
+
+# Introducción {.xlarge data-background-color="#009366"}
+
+## Reforma escolar: 4 hitos {.text-wide}
+
+<div class="timeline xs">
+
+<div class="tl-item fragment">
+  <div class="tl-dot">1980s–2000s</div>
+  <div class="tl-card" markdown="1">
+   # Municipalización + voucher
+  - Selección y copago / expansión del **PS**
+   → **Segmentación socioeconómica y académica**, *cream-skimming* y ↑ efectos de **composición**.
+  <div class="tl-sources">
+  <span class="badge"> (Hsieh & Urquiola, 2006; Bellei, 2013)</span>
+  </div>
+  </div>
+</div>
+
+<div class="tl-item fragment">
+  <div class="tl-dot">2008</div>
+  <div class="tl-card" markdown="1">
+  # Subvención Escolar Preferencial (SEP)
+  - SEP + **PME** focalizan recursos en prioritarios.  
+  - Mejoras en **gestión/convivencia**, pero copago/selección siguen → **composición estratificada**.
+  <span class="badge">(Ley 20.248, 2008; Ayuda Mineduc, s. f.).</span>
+  </div>
+</div>
+
+<div class="tl-item fragment">
+  <div class="tl-dot">2015–2016</div>
+  <div class="tl-card" markdown="1">
+  # Ley de Inclusión + SAE
+  - Fin de **selección** y **copago**; prohibición de **lucro**.  
+  - **SAE** → integración y menor sesgo en PS.
+  <div class="tl-sources">
+  .
+  <span class="badge">(Ley 20.845, 2015; Sistema de Admisión Escolar, s. f.)</span>
+  </div>
+  </div>
+</div>
+
+<div class="tl-item fragment">
+  <div class="tl-dot">2016–2022</div>
+  <div class="tl-card" markdown="1">
+  # Implementación + pospandemia
+  - **Pérdida de tiempo instruccional**; cambios en **mixtura social**, % repetidores, % migrantes, % lengua distinta.  
+  - **PISA-2022** para evaluar efectos de composición.
+  <div class="tl-sources">
+  <span class="badge">(Agencia de Calidad, 2023; Mineduc, 2023; OECD, 2023)</span>
+  </div>
+  </div>
+
+</div>
+
+</div>
+
+## Problema de investigación
+
+::: {.incremental}
+- **Brechas persistentes en Matemática** y parte del desempeño se organiza **entre escuelas** (componentes contextuales).  
+  <span class="badge">(OECD, 2023; Mizala & Torche, 2012; Taut & Escobar, 2012; Bellei, 2013)</span>
+
+- La evidencia suele tratar por separado el **capital individual** y la **composición escolar**, omitiendo el rol articulado de **mecanismos psicoeducativos** (apoyo, clima, pertenencia).  
+  <span class="badge">(Budnevich, 2020;Taut & Escobar, 2012; Agencia de Calidad,2017 )</span>
+
+- Tras **SEP** y **Ley de Inclusión/SAE**, persiste la duda sobre la **magnitud actual de los efectos de composición**.  
+  <span class="badge">(Benavides-Moreno, 2023; CIAE, 2025; Araneda, 2025)</span>
+  
+- El **ciclo pospandemia** visibiliza **desbalances** que podrían haber **intensificado las diferencias**.  
+  <span class="badge">(Mineduc, 2023; OECD, 2023)</span>
+:::
+
+
+# Antecedentes {.xlarge data-background-color="#009366"}
+
+## Antecedentes
+
+::: {.antecedentes-grid}
+
+::: {.antecedente-card .fx-rise .fragment}
+<span class="badge">1</span>
+**Capital académico/cultural (individuo):**  
+<div class="refs">[@gingrich_making_2011; @streeck_how_2016]</div>
+:::
+
+::: {.antecedente-card .fx-rise .fragment}
+<span class="badge">2</span>
+**En AL y Chile, modificaron la arquitectura de las instituciones del bienestar expandiendo lógica de mercado**  
+<div class="refs">[@ferre_welfare_2023; @madariaga_three_2020]</div>
+:::
+
+::: {.antecedente-card .fx-rise .fragment}
+<span class="badge">3</span>
+*Este orden económico se refleja en una economía moral específica*  
+<div class="refs">[@mau_inequality_2015; @svallforsMoralEconomyClass2006a]</div>
+:::
+
+::: {.antecedente-card .fx-rise .fragment}
+<span class="badge">4</span>
+*Preferencias por justicia de mercado*  
+<div class="refs">[@busemeyer_skills_2014; @castillo_perceptions_2025; @koos_moral_2019; @lindh_public_2015]</div>
+:::
+
+:::
+
+
+# ¿En qué medida el capital individual y la composición socioeconómica de la escuela se asocian con el rendimiento en Matemática de los/as estudiantes chilenos? {data-background-color="#009366"}
+
+
+## Objetivos {.text-wide}
+
+**Objetivo general**  
+Analizar la contribución relativa de **factores individuales** y **escolares** al rendimiento en Matemática de los/as estudiantes chilenos en *PISA 2022*.
+
+**Objetivos específicos**
+
+::: {.obj-list .incremental}
+1. **Capital individual**: Determinar en qué medida el **capital  individual** del/la estudiante (ESCS, educación y estatus ocupacional parental, recursos culturales del hogar) se asocia con el **rendimiento** en Matemática en Chile (PISA 2022).
+
+2. **Composición escolar**: Analizar el rol de la escuela en las diferencias de rendimiento, considerando la **composición** del **establecimiento** (promedio ESCS/HISEI, porcentaje de estudiantes migrantes y de lengua distinta a la de la prueba, y porcentaje de repetidores).
+
+3. **Mecanismos psicoeducativos**: Examinar el papel de **mecanismos psicoeducativos** (apoyo docente en matemática, clima disciplinario, ansiedad matemática, autorregulación y sentido de pertenencia) en la **atenuación** o **mediación** del **gradiente socioeconómico** sobre el rendimiento.
+
+
+:::
+
