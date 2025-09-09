@@ -642,3 +642,40 @@ iframe { border: 1px solid rgba(0,0,0,.2); width: 100%; }
 }
 .reveal .obj-list li { margin: .18rem 0; }
 .reveal .obj-list strong { color: #004f37; } /* tu verde oscuro */
+/* ================================
+   Zoom proporcional para slides RevealJS (Quarto)
+   Úsalo con clases: .zoom-98 .zoom-96 .zoom-94 .zoom-92 .zoom-90
+   ================================ */
+
+/* Evita recortes cuando se escala */
+.reveal .slides section {
+  overflow: visible;
+}
+
+/* Opción principal (Chromium/Edge/Opera): 'zoom' */
+.reveal section.zoom-98 { zoom: .98; }
+.reveal section.zoom-96 { zoom: .96; }
+.reveal section.zoom-94 { zoom: .94; }
+.reveal section.zoom-92 { zoom: .92; }
+.reveal section.zoom-90 { zoom: .90; }
+
+/* Fallback para navegadores sin 'zoom' (Firefox/Safari): usa transform */
+@supports not (zoom: 1) {
+  .reveal section.zoom-98 { transform: scale(.98); width: calc(100%/.98); transform-origin: top left; }
+  .reveal section.zoom-96 { transform: scale(.96); width: calc(100%/.96); transform-origin: top left; }
+  .reveal section.zoom-94 { transform: scale(.94); width: calc(100%/.94); transform-origin: top left; }
+  .reveal section.zoom-92 { transform: scale(.92); width: calc(100%/.92); transform-origin: top left; }
+  .reveal section.zoom-90 { transform: scale(.90); width: calc(100%/.90); transform-origin: top left; }
+}
+
+/* Opcional: compacidad suave al reducir bastante */
+.reveal section.compact p,
+.reveal section.compact li { line-height: 1.30; }
+
+.reveal section.compact ul {
+  margin: .45rem 0 .45rem 1.15rem;
+}
+
+/* Lista en dos columnas, evita cortes feos */
+.two-cols-list { column-count: 2; column-gap: 2.2rem; }
+.two-cols-list li { break-inside: avoid; margin-bottom: .35rem; }
