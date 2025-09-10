@@ -184,3 +184,61 @@ La **retroalimentación y apoyo docente** fortalecen la **interacción docente�
 # Gracias por su atención! 
 
 -   **Github del proyecto:** <https://github.com/KAravena/Presentacion-Coloquio-2025>
+
+
+
+## Referencias {#refs .smaller .text-wide}
+
+::: {.refsbox}
+Agencia de Calidad de la Educación. (2017). [Informe/boletín sobre resultados y factores asociados]. https://www.agenciaeducacion.cl/
+
+Agencia de Calidad de la Educación. (2023). [Informe 2023: brechas de aprendizaje / reactivación]. https://www.agenciaeducacion.cl/
+
+Araneda, [Inicial(es)]. (2025). [Efectos de composición post-reforma en Chile] [Informe/Preprint].
+
+Ayuda Mineduc. (s. f.). Subvención Escolar Preferencial (SEP). https://ayudamineduc.cl/
+
+Bellei, C. (2013). El estudio de la segregación escolar en Chile: marco para su análisis [Capítulo/Informe].
+
+Benavides-Moreno, [Inicial(es)]. (2023). [Segregación y efectos de composición en Chile] [Informe/tesis].
+
+Biblioteca del Congreso Nacional de Chile. (2008). Ley N.º 20.248. Establece la Subvención Escolar Preferencial (SEP). https://www.bcn.cl/leychile/navegar?idNorma=269001
+
+Biblioteca del Congreso Nacional de Chile. (2015). Ley N.º 20.845. Inclusión Escolar que regula la admisión, el copago y el lucro en establecimientos educacionales. https://www.bcn.cl/leychile/navegar?idNorma=1078172
+
+Bolaños, A., & Quim, E. (2016). Efectos del ISECC individual y composicional en el logro académico (Guatemala, 2011–2013) [Artículo/Informe HLM].
+
+Borgen, N. T., Zachrisson, H. D., & Sandsør, A. M. J. (2025). Do schools equalize or exacerbate inequality? [Working paper].
+
+Budnevich-Portales, C. (2020). La composición social de las escuelas y el rendimiento académico: Evidencia SIMCE 2017 [Informe/tesis].
+
+CIAE (Centro de Investigación Avanzada en Educación). (2025). [Informe CIAE 2025: efectos de composición/segregación]. https://ciae.uchile.cl/
+
+Delgado-Floody, P., et al. (2024). Promoting School Physical Activity (PSPA), clima escolar y logros en 4.º básico (Chile, 2017–2018) [Artículo/Informe].
+
+Gutiérrez, G. (2022). Is it socioeconomic or academic? Peer composition and achievement in Chile [Working paper/Informe].
+
+Guo, [Inicial(es)]. (2025). Socioeconomic status and academic achievement: A narrative review [Revisión narrativa].
+
+Hsieh, C.-T., & Urquiola, M. (2006). The effects of generalized school choice on achievement and stratification: Evidence from Chile. *Journal of Public Economics, 90*(8–9), 1477–1503. https://doi.org/10.1016/j.jpubeco.2005.11.002
+
+Jakubowski, M., Gajderowicz, T., & Patrinos, H. (2025). Learning losses and widening SES gradients in PISA 2022 (2000–2022, 72 países) [Working paper/World Bank].
+
+Meneses, F., Ortega, L., Kuzmanic, [Inicial], & Valenzuela, J. P. (2025). Modelos multinivel en SIMCE 6.º–10.º: SES familiar, composición escolar e interacciones por género (post-pandemia) [Working paper].
+
+Ministerio de Educación. (2017). Programa de Educación Intercultural Bilingüe (PEIB). https://peib.mineduc.cl/
+
+Ministerio de Educación. (2023). Plan de Reactivación Educativa [Informe]. https://www.mineduc.cl/
+
+OECD. (2023). PISA 2022 results (Vol. I–III). OECD Publishing. https://www.oecd.org/pisa/
+
+Raposo, U., & Gonçalves, T. (2020). Peer effects in primary education: Evidence using age at school entry as an instrument [Artículo 2SLS/IV].
+
+Rosenqvist, E., & Brandén, M. (2025). School composition and academic decisions [Working paper].
+
+Sistema de Admisión Escolar (SAE). (s. f.). Sitio oficial del SAE. https://www.sistemadeadmisionescolar.cl/
+
+Taut, S., & Escobar, M. (2012). Accountability y evaluación de desempeño en el sistema escolar chileno: aprendizajes del SIMCE [Artículo/Informe].
+
+Tian, L., Hui, [Inicial], & Lei, [Inicial]. (2025). Teacher feedback, teacher–student interaction, belonging, and self-regulated learning: A serial mediation model. *BMC Medical Education*.
+:::

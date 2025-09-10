@@ -679,3 +679,46 @@ iframe { border: 1px solid rgba(0,0,0,.2); width: 100%; }
 /* Lista en dos columnas, evita cortes feos */
 .two-cols-list { column-count: 2; column-gap: 2.2rem; }
 .two-cols-list li { break-inside: avoid; margin-bottom: .35rem; }
+
+/* --- Slide de Referencias: scroll + columnas + sangría colgante --- */
+.reveal .slides section#refs .refsbox {
+  max-height: 72vh;           /* alto útil de la caja */
+  overflow-y: auto;           /* scroll vertical */
+  padding-right: 0.9rem;      /* espacio para la barra */
+}
+
+/* Dos columnas en pantallas anchas; una en móviles */
+@media (min-width: 1100px) {
+  .reveal .slides section#refs .refsbox {
+    column-count: 2;
+    column-gap: 2.2rem;
+    column-fill: auto;
+  }
+}
+
+/* Párrafos con sangría colgante tipo APA/Chicago */
+.reveal .slides section#refs .refsbox p {
+  margin: 0 0 0.55rem 0;
+  line-height: 1.28;
+  text-indent: -1.4em;   /* primera línea hacia la izquierda */
+  padding-left: 1.4em;   /* resto de líneas alineadas */
+  break-inside: avoid;   /* evita que una referencia se rompa entre columnas */
+}
+
+/* URLs largas: que corten bonito */
+.reveal .slides section#refs .refsbox a {
+  overflow-wrap: anywhere;     /* permite corte en cualquier punto seguro */
+  word-break: normal;          /* evita cortes “feos” tipo /htt */
+}
+
+/* Título fijo arriba mientras haces scroll (opcional) */
+.reveal .slides section#refs h2 {
+  position: sticky;
+  top: 0;
+  background: inherit;
+  padding: 0.25rem 0;
+  z-index: 1;
+}
+
+/* Texto un poco más compacto en esa slide (ya marcaste .smaller) */
+.reveal .slides section#refs { font-size: 0.95rem; }
