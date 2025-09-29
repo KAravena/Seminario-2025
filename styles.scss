@@ -1,0 +1,525 @@
+/* =========================================================
+   THEME — Purple-forward (elegante, profesional)
+   ========================================================= */
+
+/* Tipos elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Paleta principal: morados protagonistas */
+$purple:        #6D28D9;   /* primario */
+$purple-deep:   #4C1D95;   /* activo/hover */
+$purple-light:  #A78BFA;   /* claro */
+$purple-soft:   #EDE9FE;   /* muy claro (borde/fondo) */
+
+/* Neutros de apoyo */
+$ink:           #0f172a;   /* texto */
+$ink-soft:      #374151;   /* secundario */
+$line:          #e5e7eb;   /* líneas suaves */
+$panel:         #fafafa;   /* panel claro */
+
+/* ========= Base tipográfica ========= */
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Literata", Georgia, serif;
+  color: $ink;
+  line-height: 1.6;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Playfair Display", "Literata", serif;
+  color: $ink;
+  letter-spacing: .2px;
+  line-height: 1.25;
+}
+
+/* Títulos con subrayado morado protagonista */
+h1, h2 { position: relative; }
+h1::after, h2::after {
+  content: ""; position: absolute; left: 0; bottom: -8px;
+  width: 76px; height: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, $purple-light, $purple);
+  transition: width .25s ease;
+}
+h1:hover::after, h2:hover::after { width: 110px; }
+
+/* Sin drop-cap */
+section > p:first-of-type::first-letter {
+  float: none !important; font-size: inherit !important; line-height: inherit !important;
+  padding: 0 !important; margin: 0 !important; color: inherit !important; font-weight: inherit !important;
+}
+
+/* ========= Paged.js: centrar páginas ========= */
+.pagedjs_pages { margin: 0 auto !important; }
+.pagedjs_page  { margin: 12px auto !important; }
+
+/* ========= Enlaces morados ========= */
+a:any-link {
+  color: $purple-deep;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .2s ease, color .15s ease;
+}
+a:hover, a:focus {
+  color: $purple;
+  background-size: 100% 2px;
+}
+
+/* ========= Separadores / citas ========= */
+hr {
+  border: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, $purple-soft, transparent);
+  margin: 1.6rem 0;
+}
+blockquote {
+  margin: 1.1rem auto; padding: .6rem .9rem;
+  border-left: 4px solid $purple-light;
+  background: #f7f7f9; color: $ink-soft; border-radius: 8px;
+}
+
+/* ========= Listas (viñetas moradas) ========= */
+ul li { list-style: none; position: relative; padding-left: 1.05rem; }
+ul li::before {
+  content: ""; width: .48rem; height: .48rem; border-radius: 999px;
+  background: $purple-light; position: absolute; left: 0; top: .58em;
+  box-shadow: 0 0 0 2px $purple-soft inset;
+}
+
+/* ========= Figuras / tablas ========= */
+figure {
+  background: #fff; border: 1px solid #edeff2; border-radius: 12px;
+  padding: .6rem .6rem .3rem; box-shadow: 0 6px 18px rgba(17,24,39,.05);
+}
+figcaption { color: #61667a; font-size: .92em; text-align: center; font-style: italic; margin-top: .45rem; }
+table {
+  width: 100%; border-collapse: collapse; font-size: .97em; margin: 1em auto;
+  background: #fff; border: 1px solid #f1f5f9; border-radius: 12px; overflow: hidden;
+}
+thead th {
+  background: $purple-soft;
+  color: $purple-deep;
+  font-weight: 650;
+  border-bottom: 2px solid $purple-light;
+  text-align: left;
+}
+th, td { padding: .6em .7em; border-bottom: 1px solid #eef2f7; }
+tbody tr:nth-child(even) { background: #fbfbff; }
+tbody tr:hover { background: #f7f3ff; }
+
+/* ========= Código ========= */
+pre {
+  background: linear-gradient(160deg, #faf8ff 0%, #f3f0ff 100%);
+  border-left: 4px solid $purple-light;
+  padding: 12px 14px; border-radius: 12px; overflow-x: auto;
+  border: 1px solid #eee7ff;
+}
+code:not(pre code) {
+  background: #f5f3ff; border: 1px solid #ebe7ff;
+  padding: .12rem .3rem; border-radius: 6px; color: #3b3560;
+}
+
+/* ========= Callouts ========= */
+.callout {
+  border-radius: 12px; border: 1px solid #ece5ff; background: #faf8ff;
+  box-shadow: 0 4px 14px rgba(76, 29, 149, .06);
+}
+.callout > .callout-header {
+  font-weight: 650; background: #f3f0ff; border-bottom: 1px solid #e9e2ff;
+  padding: .55rem .8rem; color: $purple-deep;
+}
+.callout > .callout-body { padding: .65rem .8rem; }
+
+/* ========= HERO minimal — morado protagonista ========= */
+.quarto-title-block.default{
+  position: relative;
+  max-width: 1200px;                 /* ↑ antes 980px */
+  margin: 0 auto 1.2rem auto;
+  padding: 22px 16px 18px;           /* ↓ menos padding lateral para ganar ancho útil */
+  border: 1px solid #e9e2ff;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfbff 100%),
+    radial-gradient(900px 900px at -10% -30%, rgba($purple-light,.14) 0, rgba(255,255,255,0) 60%),
+    radial-gradient(700px 700px at 110% -20%, rgba($purple,.10) 0, rgba(255,255,255,0) 55%);
+  background-blend-mode: normal, screen, screen;
+  box-shadow: 0 1px 0 rgba(76,29,149,.05), 0 14px 30px rgba(76,29,149,.08);
+  overflow: hidden;
+}
+.quarto-title-block.default::after{
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  border-radius: 18px; padding: 1px;
+  background: linear-gradient(90deg, $purple-soft, #D6BCFA);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+
+/* ====== TÍTULO del HERO — más largo y compacto ====== */
+#title-block-header.quarto-title-block.default .quarto-title h1.title{
+  position: relative;
+  font-weight: 700;
+  color: #2f2b3f;
+  margin: .1rem 0 .5rem;
+
+  /* MÁS ANCHO: quitamos límite y dejamos fluir */
+  max-width: none !important;
+
+  /* Tamaño más contenido para títulos largos */
+  font-size: clamp(1.15rem, 0.85rem + 0.9vw, 1.75rem);
+  line-height: 1.28;
+  letter-spacing: .05px;
+
+  text-wrap: balance;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+}
+#title-block-header.quarto-title-block.default .quarto-title h1.title::after{
+  content:""; position:absolute; left:0; bottom:-12px;
+  width: 56px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, $purple-light, $purple);
+  transition: width .25s ease;
+}
+#title-block-header.quarto-title-block.default .quarto-title h1.title:hover::after{ width: 90px; }
+
+/* Meta (autores/afil/fecha) */
+.quarto-title-block .quarto-title-meta{
+  display: grid; gap: 10px 24px; grid-template-columns: 1fr 1fr;
+  padding-top: 8px; background: transparent; border: 0; box-shadow: none;
+}
+.quarto-title-block .quarto-title-meta dl{ display: contents; margin: 0; }
+.quarto-title-block .quarto-title-meta dt{
+  font-variant: small-caps; letter-spacing: .08em; font-size: .84rem;
+  color: #6b6b89; margin: 0; align-self: center;
+}
+.quarto-title-block .quarto-title-meta dd{
+  margin: 0; background: rgba(255,255,255,.7);
+  border: 1px solid #e9e2ff; border-radius: 12px;
+  padding: 10px 12px 10px 16px; position: relative; backdrop-filter: blur(2px);
+}
+.quarto-title-block .quarto-title-meta dd::before{
+  content: ""; position: absolute; left: 8px; top: 10px; bottom: 10px;
+  width: 3px; border-radius: 2px; background: linear-gradient($purple-light, $purple-soft);
+}
+.quarto-title-block .quarto-title-meta dd ul{ list-style: none; margin: 0; padding: 0; }
+.quarto-title-block .quarto-title-meta dd li{ margin: 0 0 .15rem 0; }
+
+/* Abstract destacado */
+.quarto-title-block .abstract{
+  background: #FBFAFF;
+  border: 1px solid #e9e2ff; border-radius: 12px;
+  padding: 14px 16px; font-size: .98em; margin-top: .85rem;
+  border-left: 5px solid $purple-light;
+  box-shadow: inset 0 0 0 3px #fefeff;
+}
+.quarto-title-block .abstract > .abstract-title{
+  font-variant: small-caps; letter-spacing: .08em; color: $purple-deep;
+}
+
+/* Línea suave bajo el hero */
+.quarto-title-block.default + *{
+  margin-top: 1.2rem; border-top: 1px solid #efeafe; padding-top: .9rem;
+}
+
+/* Responsive meta */
+@media (max-width: 860px){
+  .quarto-title-block .quarto-title-meta{ grid-template-columns: 1fr; gap: 8px 0; }
+}
+
+/* ========= TOC limpio (sin puntitos), morado protagonista ========= */
+#TOC{
+  background: #fbfbff; border: 1px solid #e9e2ff; border-radius: 14px;
+  padding: .75rem .95rem; box-shadow: 0 6px 16px rgba(76,29,149,.06);
+  margin: .9rem 0 1.1rem 0 !important;
+}
+#TOC .toc-title{
+  font-family: "Playfair Display","Literata",serif; font-weight: 700;
+  font-size: 1rem; color: $purple-deep; margin: 0 0 .5rem 0;
+  border-bottom: 2px solid $purple-soft; padding-bottom: .4rem;
+}
+/* fuera bullets raros */
+#TOC ul{ list-style: none; margin: 0; padding-left: 0; }
+#TOC li{ margin: .18rem 0; }
+#TOC li::before{ content: none !important; }
+#TOC li::marker{ content: "" !important; }
+/* enlaces */
+#TOC a{
+  display: block; color: #4b4b66; text-decoration: none;
+  padding: .22rem .35rem .22rem .6rem;
+  border-left: 3px solid transparent; border-radius: 8px;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+#TOC a:hover{
+  color: $purple-deep;
+  background: linear-gradient(90deg, rgba($purple, .08), transparent);
+}
+#TOC a[aria-current="true"], #TOC a.active{
+  color: $purple-deep; font-weight: 650;
+  border-left-color: $purple;
+  background: linear-gradient(90deg, rgba($purple, .14), transparent);
+}
+
+/* ========= Notas / refs ========= */
+#refs .csl-entry { margin-left: 1.8em; text-indent: -1.8em; }
+.footnotes { border-top: 1px solid #efeafe; margin-top: 1.6rem; padding-top: .75rem; }
+
+/* ========= Impresión ========= */
+@page { size: A4; margin: 2.5cm 2.2cm; }
+@media print {
+  a:any-link { color: $purple-deep; text-decoration: underline; }
+  #TOC { border-color: $purple-soft; box-shadow: none; }
+}
+
+/* =========================================================
+   Research Qs & Objectives — presentación elegante
+   ========================================================= */
+
+/* Etiqueta superior (badge) para cajas */
+.research-qs .label,
+.objective-card .label{
+  display:inline-block;
+  font-variant: small-caps;
+  letter-spacing:.08em;
+  font-weight:700;
+  font-size: .95rem;
+  color:#4C1D95;
+  background:#EDE9FE;
+  border:1px solid #E9E2FF;
+  padding:.24rem .6rem;
+  border-radius:999px;
+  margin-bottom:.5rem;
+}
+
+/* Preguntas de investigación */
+.research-qs{
+  background:#FBFAFF;
+  border:1px solid #E9E2FF;
+  border-radius:14px;
+  padding:14px 16px;
+  box-shadow:0 6px 16px rgba(76,29,149,.06);
+}
+.research-qs ul{ list-style:none; margin:.2rem 0 0; padding:0; }
+.research-qs li{ position:relative; padding-left:1.25rem; margin:.35rem 0; }
+.research-qs li::before{
+  content:""; position:absolute; left:0; top:.65em;
+  width:.5rem; height:.5rem; border-radius:999px;
+  background:#A78BFA; box-shadow:0 0 0 2px #F0EFFF inset;
+}
+
+/* Objetivos */
+.objectives-grid{ display:grid; gap:18px; }
+.objective-card{
+  background:#ffffff; border:1px solid #E9E2FF; border-radius:16px;
+  padding:16px 18px; box-shadow:0 6px 16px rgba(76,29,149,.05);
+}
+.objective-card.general{ position:relative; }
+.objective-card.general::before{
+  content:""; position:absolute; left:12px; top:12px; bottom:12px; width:4px; border-radius:3px;
+  background:linear-gradient(#A78BFA,#EDE9FE);
+}
+.objective-card.general p{ margin:0; padding-left:14px; color:#2f2b3f; line-height:1.58; }
+
+.obj-list{ counter-reset: obj; margin:.25rem 0 0; padding-left:0; }
+.obj-list > li{
+  list-style:none; position:relative; counter-increment: obj;
+  margin:.65rem 0; padding-left:5.0rem; line-height:1.58;
+}
+.obj-list > li::before{
+  content:"O.E." counter(obj);
+  position:absolute; left:0; top:.05rem; font-weight:700; letter-spacing:.03em;
+  color:#4C1D95; background:#F5F3FF; border:1px solid #E9E2FF;
+  border-radius:12px; padding:.22rem .6rem; min-width:4.4rem; text-align:center;
+  box-shadow:0 1px 0 rgba(76,29,149,.08);
+}
+
+/* Objetivos apilados (siempre 1 columna) */
+.objectives-grid{ grid-template-columns: 1fr !important; }
+@media (min-width:600px){ .objectives-grid{ grid-template-columns:1fr !important; } }
+
+@media (max-width:420px){
+  .obj-list > li{ padding-left:4.2rem; }
+  .obj-list > li::before{ min-width:3.8rem; padding:.18rem .5rem; }
+}
+
+/* ——— Justificar texto del cuerpo ——— */
+p {
+  text-align: justify;
+  text-justify: inter-word;        /* mejora el espaciado en navegadores que lo soportan */
+  hyphens: auto;                   /* guiones automáticos */
+  -webkit-hyphens: auto;
+}
+
+/* Mantén títulos y pies centrados/izq. */
+h1, h2, h3, h4, h5 { text-align: left; }
+figcaption { text-align: center; }
+
+/* Si quieres justificar listas también: */
+li { text-align: justify; hyphens: auto; }
+
+/* Opt-out: cualquier bloque con esta clase NO se justifica */
+.no-justify p, .no-justify li { text-align: initial; hyphens: manual; }
+
+.justify p, .justify li { text-align: justify; hyphens: auto; }
+
+/* ===== Cronograma 6 meses (mini-Gantt morado) ===== */
+.timeline6{
+  background:#fff;
+  border:1px solid #E9E2FF;
+  border-radius:16px;
+  padding:10px 10px 6px;
+  box-shadow:0 8px 18px rgba(76,29,149,.06);
+}
+
+.timeline6 .row{
+  display:grid;
+  grid-template-columns: minmax(260px, 1.2fr) repeat(6, 1fr);
+  align-items:center;
+  gap:8px;
+  padding:8px 6px;
+  border-bottom:1px dashed #efeafe;
+}
+.timeline6 .row:last-child{ border-bottom:0; }
+
+.timeline6 .row.head{
+  font-weight:700; color:#4C1D95;
+  background:#FBFAFF;
+  border-radius:12px;
+}
+.timeline6 .row.head .m{
+  text-align:center;
+  font-variant: small-caps;
+  letter-spacing:.04em;
+}
+
+.timeline6 .task{
+  font-weight:600;
+  color:#2f2b3f;
+  padding-right:6px;
+}
+
+.timeline6 .bar{
+  height:32px;
+  border-radius:10px;
+  background: linear-gradient(90deg,#A78BFA,#6D28D9);
+  border: 1px solid #D6BCFA;
+  box-shadow: 0 2px 8px rgba(76,29,149,.18);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:.85rem;
+}
+.timeline6 .bar span{
+  padding:0 6px;
+  text-shadow:0 1px 0 rgba(0,0,0,.12);
+}
+
+/* Responsive: en pantallas estrechas, el nombre ocupa toda la fila y barras debajo */
+@media (max-width: 720px){
+  .timeline6 .row{
+    grid-template-columns: 1fr;
+    gap:6px;
+  }
+  .timeline6 .row.head{ display:none; } /* ocultar cabecera */
+  .timeline6 .bar{ height:28px; font-size:.8rem; }
+}
+
+/* ===== Cronograma: etiquetas dentro de las barras más pequeñas ===== */
+
+/* Barra un pelín más compacta */
+.timeline6 .bar{
+  height: 28px;                     /* antes 32px */
+  border-radius: 10px;
+}
+
+/* Texto “Sem. 2–4” más pequeño y estable */
+.timeline6 .bar span{
+  font-size: clamp(10px, 0.78vw, 12px);  /* ↓ tamaño adaptable */
+  line-height: 1;                        /* evita que “salte” verticalmente */
+  font-weight: 700;
+  letter-spacing: .1px;
+  white-space: nowrap;                   /* no rompe en dos líneas */
+  padding: 0 4px;                        /* menos padding interno */
+  transform: translateY(-0.5px);         /* microcentrado óptico */
+  text-shadow: 0 1px 0 rgba(0,0,0,.10);  /* mejora contraste sobre morado */
+}
+
+/* Si una barra es muy corta, aún más pequeño para que quepa */
+.timeline6 .bar.short span{
+  font-size: clamp(9px, 0.7vw, 11px);
+}
+
+/* Responsive: en móviles, reduce un poco más y evita recortes */
+@media (max-width: 720px){
+  .timeline6 .bar{ height: 26px; }
+  .timeline6 .bar span{
+    font-size: clamp(9px, 2.7vw, 11px);
+    padding: 0 3px;
+  }
+}
+
+/* =========================
+   FINO-AJUSTES PROFESIONALES
+   ========================= */
+
+/* 2) Subrayado en enlaces: desactiva en pantallas táctiles */
+@media (hover: none) {
+  a:any-link { background-size: 0 0 !important; text-decoration: underline; }
+}
+
+/* 3) Accesibilidad: focus ring & selección */
+:where(a, button, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid rgba(167,139,250,.65);   /* $purple-light */
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+::selection {
+  background: rgba(167,139,250,.35);          /* $purple-light */
+  color: #1f1b2e;
+}
+
+/* 4) TOC “sticky” y anclajes con offset */
+#TOC {
+  position: sticky;
+  top: 1rem;                     /* se queda visible al hacer scroll */
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+}
+:where(h1, h2, h3, h4, h5)[id] {
+  scroll-margin-top: 80px;       /* evita que el título quede tapado bajo el hero */
+}
+
+/* 5) Tablas responsivas con scroll suave */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  background: #fff;
+  padding: 2px;                  /* micro colchón para no cortar bordes */
+}
+.table-responsive > table { margin: 0; border: 0; }
+table { width: 100%; }
+@media (max-width: 720px){
+  table { font-size: .95em; }
+}
+
+
+
+
+/* 8) Respeta reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Extras útiles
+   ———— */
+
+/* Tipografía fina: cifras antiguas y ligaduras donde aplique */
+body {
+  font-variant-numeric: oldstyle-nums tabular-nums;
+  font-variant-ligatures: common-ligatures;
+}
+
+
+/* Evita numerar el título de la página */
+#title-block-header h1.title::before { content: none !important; }
+
+/* Cronograma: envoltorio responsivo si lo usas como tabla */
+.wrap-table { overflow-x:auto; -webkit-overflow-scrolling:touch; }

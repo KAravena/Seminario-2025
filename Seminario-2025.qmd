@@ -1,0 +1,195 @@
+---
+title: "Ansiedad en matemática y rendimiento: diferencias según nivel socioeconómico en estudiantes chilenos"
+date: last-modified
+author:
+  - name: "Katherine Aravena Herrera"
+    affiliations:
+      - name: "Universidad de Chile"
+        department: "Departamento de Sociología"
+  - name: "Juan Carlos Castillo (Profesor guía)"
+    affiliations:
+      - name: "Universidad de Chile"
+        department: "Departamento de Sociología"
+
+bibliography: bibliography.bib
+
+format:
+  html-paged:
+    toc: true
+    number-sections: true
+    page-layout: article       # cuerpo más estrecho, estilo paper
+    self-contained: true       # empaqueta CSS/JS
+    css: styles.scss    # ajustes finos (abajo)
+---
+
+
+
+## Planteamiento del problema {#sec-intro}
+
+En el sistema escolar chileno persiste una brecha por nivel socioeconómico en los aprendizajes de Matemática: a mayor nivel socioeconómico de las y los estudiantes, mayor tiende a ser su rendimiento [@oecd2023pisa; @oecd2023chile; @mineduc2023pisa; @mizala2012chile]. Este patrón dialoga con una estructura escolar históricamente segregada por origen social y recursos, donde la composición socioeconómica de los establecimientos condiciona oportunidades, expectativas y climas de aprendizaje [@mizala2012chile; @agencia2023resultados]. Pese a su relevancia, sabemos menos sobre qué procesos psicoeducativos dentro de la escuela amplían o reducen ese gradiente en Matemática, particularmente en el caso nacional [@oecd2023pisa; @oecd2023chile].
+
+Entre estos procesos, la ansiedad ante la matemática destaca como un factor negativo y consistente del desempeño y, a diferencia de otros determinantes estructurales, es susceptible de intervención pedagógica mediante prácticas de aula tales como evaluación formativa, retroalimentación segura, normalización del error y entrenamiento en autorregulación emocional [@pekrun2006control; @black1998assessment; @ashcraft2007working; @carey2019relation]. Esta agenda es particularmente pertinente en Chile, donde la política educativa reciente ha puesto énfasis en bienestar y socioemocionalidad, pero aún falta conectar estas prácticas con brechas específicas en Matemática y con mecanismos efectivos en las aulas de clases. [@agencia2023resultados; @mineduc2023pisa]. En ese sentido, el contexto post-COVID sugiere que los choques recientes han intensificado desigualdades, con pérdidas mayores en Matemática, lo que refuerza la urgencia de identificar palancas que mitiguen estos efectos [@Jakubowski_2024; @Meneses_2025].
+
+Siguiendo esta línea, más allá de las características individuales, el contexto escolar importa. En especial, la composición socioeconómica del establecimiento y los climas emocionales y pedagógicos que configuran normas, expectativas y soportes que podrían condicionar la magnitud del efecto de la ansiedad individual sobre el rendimiento. En este marco, estudiar cómo la ansiedad de cada estudiante se asocia a sus resultados y en qué climas escolares ese efecto se intensifica o atenúa ofrece evidencia directamente útil para la gestión pedagógica y el diseño de políticas de bienestar escolar en Chile, articulando composición, climas y prácticas concretas de enseñanza en Matemática [@fraser2012classroom; @hattie2009visible; @mineduc2023pisa].
+
+##  Pregunta(s) de investigación {#sec-meth}
+
+::: {.research-qs}
+
+- **1.** ¿En qué medida la relación entre el nivel socioeconómico del estudiante y su rendimiento en Matemática se ve afectada por la ansiedad ante la matemática?
+- **2.** ¿Cómo varía dicho efecto según la composición socioeconómica y el clima de ansiedad matemática del establecimiento en estudiantes chilenos el año 2022?
+:::
+
+
+## Objetivos {#sec-verify}
+
+::: {.objectives-grid}
+<div class="objective-card general">
+  <div class="label">Objetivo general</div>
+  <p>Analizar en qué medida la relación entre el nivel socioeconómico del estudiante y su rendimiento en Matemática se ve afectada por la ansiedad ante la matemática a nivel individual, y cómo cambia según la composición socioeconómica y el clima de ansiedad matemática del establecimiento, en la muestra chilena de PISA 2022.</p>
+</div>
+
+<div class="objective-card specifics">
+  <div class="label">Objetivos específicos</div>
+  <ol class="obj-list">
+    <li>Determinar la relación entre el nivel socioeconómico del estudiante y su rendimiento en Matemática.</li>
+    <li>Analizar la influencia de la ansiedad ante la matemática sobre el rendimiento en Matemática, incluyendo la evaluación de posibles comportamientos no lineales de la ansiedad.</li>
+    <li>Examinar en qué medida la composición socioeconómica del establecimiento y el clima de ansiedad matemática de la escuela modifican (atenúan o amplifican) el efecto de la ansiedad individual sobre el rendimiento y la relación entre nivel socioeconómico del estudiante y su desempeño en Matemática.</li>
+  </ol>
+</div>
+:::
+
+## Marco teórico 
+
+### Desigualdades y brecha socioeconómica: 
+
+La evidencia muestra de forma consistente una brecha por nivel socioeconómico en el rendimiento: quienes provienen de familias con más recursos obtienen, en promedio, mejores resultados. Esto ocurre tanto por recursos materiales y culturales disponibles en el hogar como por procesos escolares que pueden reproducir o amplificar ventajas iniciales.  
+
+Por un lado, la reproducción y capital cultural, donde el habitus y el capital facilitan leer las expectativas escolares, ajustarse a los estilos de evaluación y legitimar ciertos criterios de excelencia, produciendo una correspondencia entre orígenes sociales y logros [@bourdieu1977reproduction; @lareau2003unequal]. Por otro lado, los efectos de composición y pares, que más allá de las características individuales, la composición del establecimiento incide en el aprendizaje mediante normas compartidas, expectativas colectivas, recursos comunes y calidad de enseñanza; escuelas con mayor nivel socioeconómico promedio suelen mostrar climas académicos más exigentes y redes de apoyo más densas [@coleman1966equality; @willms1986scotland; @gamoran1992stratification]. 
+
+A esto se suman expectativas docentes diferenciadas que pueden cristalizar profecías autocumplidas [@rosenthal1968pygmalion]. En Chile, la segregación por origen social y los efectos de composición están ampliamente documentados, subrayando la centralidad del nivel socioeconómico en las brechas de aprendizaje [@bellei2013segregacion; @mizala2012chile; @agencia2023resultados; @oecd2023pisa; @oecd2023chile; @mineduc2023pisa].
+
+### Ansiedad en matemática y mecanismos psicológicos:
+
+La ansiedad en matemática se asocia de modo sistemático con menor rendimiento, operando de varias formas. Primero, interfiere con la memoria de trabajo, ya que la ansiedad consume recursos atencionales y reduce la capacidad para mantener y manipular información numérica [@ashcraft2007working; @eysenck2007attentional]. Segundo, afecta la autoeficacia, donde creencias de baja capacidad elevan la evitación, reducen el esfuerzo sostenido y debilitan la perseverancia ante la dificultad [@bandura1997selfefficacy; @zimmerman2000attaining]. Tercero, erosiona la autorregulación del aprendizaje, en el cual estudiantes ansiosos usan con menor consistencia estrategias metacognitivas y de control del estudio [@pintrich2004conceptual]. 
+
+La teoría control valor integra estos mecanismos, debido a que la ansiedad surge cuando se anticipa un bajo control percibido ante tareas de alto valor, afectando motivación y desempeño [@pekrun2006control]. Además, los efectos pueden ser no lineales, con niveles altos de ansiedad la caída de rendimiento se acelera [@carey2019relation; @namkung2019meta; @maloney2012mathanxiety]. Para concluir, la ansiedad en matemáticas puede actuar como mecanismo mediador o moderador del efecto del nivel socioeconómico, donde el origen social estructura oportunidades para desarrollar autoeficacia y estrategias, y expone diferencialmente a contextos evaluativos que generan ansiedad.
+
+### Contexto escolar, normas y climas afectivo pedagógicos:
+
+El contexto escolar provee una estructura de oportunidades y normas que configuran prácticas de aula, expectativas y soportes socioemocionales. La composición económica opera como recurso contextual (infraestructura, redes, expectativas de continuidad de estudios) y como marco normativo que define estándares de esfuerzo y rendimiento [@coleman1966equality; @raudenbush2002hlm; @gamoran1992stratification]. A su vez, el clima de aula, que se observa mediante patrones compartidos de orden, apoyo docente y foco académico se asocia con mejores logros cuando combina altas expectativas y apoyo pedagógico [@fraser2012classroom; @hattie2009visible]. 
+
+Un componente específico es el clima de ansiedad matemática, que a nivel de escuela, captura la carga emocional promedio frente a la matemática. Ese clima puede amplificar el impacto de la ansiedad individual (cuando predomina la amenaza y el estrés) o atenuarlo (cuando hay apoyo, evaluación formativa y normalización del error).  En Chile, diferencias de clima y composición entre tipos de establecimiento se asocian a brechas persistentes en rendimiento [@agencia2023resultados; @bellei2013segregacion].
+
+
+## Metodología
+
+El estudio adopta un diseño cuantitativo con modelos multinivel de dos niveles  (estudiantes y escuelas respectivamente), apropiado para estimar asociaciones e interacciones dentro del aula y entre niveles, controlando la dependencia intragrupo propia de datos anidados [@raudenbush2002hlm]. La base empírica son los datos PISA 2022 que consideran a estudiantes de 15 años, con 6.488 estudiantes anidados en 230 escuelas, trabajando específicamente con la submuestra de Chile. 
+
+La variable dependiente es el puntaje de Matemática, estimado mediante los plausible values (PV1–PV10) y combinado al final según las reglas de Rubin.
+
+Las variables a nivel de estudiante incluyen el índice socioeconómico centrado en la media de su escuela, la ansiedad ante matemáticas, también centrada como variable independiente foco, y como controles apoyo docente, autorregulación, repetición, idioma en el hogar y estatus migrante. A nivel de escuela se incorporan media de nivel socioeconómico por escuela, que capta efecto de composición y media de ansiedad, y adicionalmente, centrados a la gran media. 
+
+
+## Cronograma tentativo (6 meses)
+
+::: {.timeline6}
+
+<!-- Encabezados de meses -->
+<div class="row head">
+  <div class="task"></div>
+  <div class="m">Mes 1</div><div class="m">Mes 2</div><div class="m">Mes 3</div>
+  <div class="m">Mes 4</div><div class="m">Mes 5</div><div class="m">Mes 6</div>
+</div>
+
+<!-- 1 -->
+<div class="row">
+  <div class="task">Ajuste de tema, título y Exposé</div>
+  <div class="bar" style="grid-column: 2 / 3"><span>Sem. 1–3</span></div>
+  <div class="bar" style="grid-column: 3 / 4"><span>Sem. 1</span></div>
+</div>
+
+<!-- 2 -->
+<div class="row">
+  <div class="task">Marco teórico (búsqueda, síntesis, bib)</div>
+  <div class="bar" style="grid-column: 2 / 3"><span>Sem. 1–4</span></div>
+  <div class="bar" style="grid-column: 3 / 4"><span>Sem. 1–3</span></div>
+  <div class="bar" style="grid-column: 4 / 5"><span>Sem. 1</span></div>
+</div>
+
+<!-- 3 -->
+<div class="row">
+  <div class="task">Descarga/organización de datos PISA 2022–Chile</div>
+  <div class="bar" style="grid-column: 2 / 3"><span>Sem. 2–4</span></div>
+</div>
+
+<!-- 4 -->
+<div class="row">
+  <div class="task">Limpieza y construcción de variables (L1/L2)</div>
+  <div class="bar" style="grid-column: 3 / 4"><span>Sem. 1–4</span></div>
+  <div class="bar" style="grid-column: 4 / 5"><span>Sem. 1</span></div>
+</div>
+
+<!-- 5 -->
+<div class="row">
+  <div class="task">Pesos y plausible values (Reglas de Rubin)</div>
+  <div class="bar" style="grid-column: 3 / 4"><span>Sem. 2–4</span></div>
+</div>
+
+<!-- 6 -->
+<div class="row">
+  <div class="task">Modelos M0–M1 (ICC y efectos L1)</div>
+  <div class="bar" style="grid-column: 3 / 4"><span>Sem. 3–4</span></div>
+  <div class="bar" style="grid-column: 4 / 5"><span>Sem. 1–2</span></div>
+</div>
+
+<!-- 7 -->
+<div class="row">
+  <div class="task">Modelos M2–M3 (L2, L1×L2, Anxmat²)</div>
+  <div class="bar" style="grid-column: 4 / 5"><span>Sem. 2–4</span></div>
+  <div class="bar" style="grid-column: 5 / 6"><span>Sem. 1–2</span></div>
+</div>
+
+<!-- 8 -->
+<div class="row">
+  <div class="task">Diagnósticos (supuestos, VIF, residuos; AIC/BIC)</div>
+  <div class="bar" style="grid-column: 4 / 5"><span>Sem. 4</span></div>
+  <div class="bar" style="grid-column: 5 / 6"><span>Sem. 1–2</span></div>
+</div>
+
+<!-- 9 -->
+<div class="row">
+  <div class="task">Robustez (pesos; pendiente aleatoria)</div>
+  <div class="bar" style="grid-column: 5 / 6"><span>Sem. 2–4</span></div>
+  <div class="bar" style="grid-column: 6 / 7"><span>Sem. 1</span></div>
+</div>
+
+<!-- 10 -->
+<div class="row">
+  <div class="task">Gráficos (efectos marginales, pendientes simples)</div>
+  <div class="bar" style="grid-column: 6 / 7"><span>Sem. 1–3</span></div>
+</div>
+
+<!-- 11 -->
+<div class="row">
+  <div class="task">Redacción de resultados (método, tablas, figuras)</div>
+  <div class="bar" style="grid-column: 6 / 7"><span>Sem. 2–4</span></div>
+  <div class="bar" style="grid-column: 7 / 8"><span>Sem. 1</span></div>
+</div>
+
+<!-- 12 -->
+<div class="row">
+  <div class="task">Discusión y conclusiones (implicancias para Chile)</div>
+  <div class="bar" style="grid-column: 7 / 8"><span>Sem. 1–3</span></div>
+</div>
+
+<!-- 13 -->
+<div class="row">
+  <div class="task">Revisión final (formato, referencias, anexos)</div>
+  <div class="bar" style="grid-column: 7 / 8"><span>Sem. 4</span></div>
+</div>
+
+:::
+
+
+## Referencias
