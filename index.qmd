@@ -84,7 +84,7 @@ El estudio adopta un diseño cuantitativo con modelos multinivel de dos niveles 
 
 La variable dependiente es el puntaje de Matemática, estimado mediante los plausible values (PV1–PV10) y combinado al final según las reglas de Rubin.
 
-Las variables a nivel de estudiante incluyen el índice socioeconómico centrado en la media de su escuela, la ansiedad ante matemáticas, también centrada como variable independiente foco, y como controles apoyo docente, autorregulación, repetición, idioma en el hogar y estatus migrante. A nivel de escuela se incorporan media de nivel socioeconómico por escuela, que capta efecto de composición y media de ansiedad, y adicionalmente, centrados a la gran media. 
+Las variables a nivel de estudiante incluyen el índice socioeconómico, la ansiedad ante matemáticas como variable independiente y como controles apoyo docente, autorregulación, repetición, idioma en el hogar y estatus migrante, todas centradas en la media de su escuela. A nivel de escuela se incorporan el promedio de nivel socioeconómico por escuela, que capta efecto de composición y el promedio de ansiedad centrados a la gran media. 
 
 
 ## Cronograma tentativo (6 meses)
