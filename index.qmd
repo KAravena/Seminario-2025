@@ -57,7 +57,7 @@ Siguiendo esta línea, más allá de las características individuales, el conte
 
 ## Marco teórico 
 
-### Desigualdades y brecha socioeconómica: 
+### Desigualdades y brecha socioeconómica 
 
 La evidencia muestra de forma consistente una brecha por nivel socioeconómico en el rendimiento: quienes provienen de familias con más recursos obtienen, en promedio, mejores resultados. Esto ocurre tanto por recursos materiales y culturales disponibles en el hogar como por procesos escolares que pueden reproducir o amplificar ventajas iniciales.  
 
@@ -65,13 +65,13 @@ Por un lado, la reproducción y capital cultural, donde el habitus y el capital 
 
 A esto se suman expectativas docentes diferenciadas que pueden cristalizar profecías autocumplidas [@rosenthal1968pygmalion]. En Chile, la segregación por origen social y los efectos de composición están ampliamente documentados, subrayando la centralidad del nivel socioeconómico en las brechas de aprendizaje [@bellei2013segregacion; @mizala2012chile; @agencia2023resultados; @oecd2023pisa; @oecd2023chile; @mineduc2023pisa].
 
-### Ansiedad en matemática y mecanismos psicológicos:
+### Ansiedad en matemática y mecanismos psicológicos
 
 La ansiedad en matemática se asocia de modo sistemático con menor rendimiento, operando de varias formas. Primero, interfiere con la memoria de trabajo, ya que la ansiedad consume recursos atencionales y reduce la capacidad para mantener y manipular información numérica [@ashcraft2007working; @eysenck2007attentional]. Segundo, afecta la autoeficacia, donde creencias de baja capacidad elevan la evitación, reducen el esfuerzo sostenido y debilitan la perseverancia ante la dificultad [@bandura1997selfefficacy; @zimmerman2000attaining]. Tercero, erosiona la autorregulación del aprendizaje, en el cual estudiantes ansiosos usan con menor consistencia estrategias metacognitivas y de control del estudio [@pintrich2004conceptual]. 
 
 La teoría control valor integra estos mecanismos, debido a que la ansiedad surge cuando se anticipa un bajo control percibido ante tareas de alto valor, afectando motivación y desempeño [@pekrun2006control]. Además, los efectos pueden ser no lineales, con niveles altos de ansiedad la caída de rendimiento se acelera [@carey2019relation; @namkung2019meta; @maloney2012mathanxiety]. Para concluir, la ansiedad en matemáticas puede actuar como mecanismo mediador o moderador del efecto del nivel socioeconómico, donde el origen social estructura oportunidades para desarrollar autoeficacia y estrategias, y expone diferencialmente a contextos evaluativos que generan ansiedad.
 
-### Contexto escolar, normas y climas afectivo pedagógicos:
+### Contexto escolar, normas y climas afectivo pedagógicos
 
 El contexto escolar provee una estructura de oportunidades y normas que configuran prácticas de aula, expectativas y soportes socioemocionales. La composición económica opera como recurso contextual (infraestructura, redes, expectativas de continuidad de estudios) y como marco normativo que define estándares de esfuerzo y rendimiento [@coleman1966equality; @raudenbush2002hlm; @gamoran1992stratification]. A su vez, el clima de aula, que se observa mediante patrones compartidos de orden, apoyo docente y foco académico se asocia con mejores logros cuando combina altas expectativas y apoyo pedagógico [@fraser2012classroom; @hattie2009visible]. 
 
