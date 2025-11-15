@@ -24,4 +24,3 @@ A continuación, se presenta el contenido principal de los archivos de trabajo d
 * **Metodología:** Modelos **Multinivel** (Estudiante/Escuela) aplicados a datos PISA 2022.
 * **Enlace a la Presentación:**
     [Ver Presentación del Exposé](https://karavena.github.io/Seminario-2025/Expos%C3%A9/index.html)
-```
