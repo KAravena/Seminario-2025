@@ -1,0 +1,258 @@
+﻿---
+title: "Metodología"
+---
+
+::: {.content-visible when-format="html"}
+<style>
+.tabla-wrap {
+  width: 100%;
+  margin: 1rem 0 1.5rem 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.tabla-wrap-inner {
+  min-width: 900px;
+}
+
+.tabla-html {
+  font-size: 0;
+  line-height: 0;
+}
+
+.tabla-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  background-color: #ffffff;
+}
+
+.tabla-wrap thead {
+  background-color: #f5f5f7;
+}
+
+.tabla-wrap th,
+.tabla-wrap td {
+  padding: 6px 8px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.tabla-wrap tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.tabla-wrap tbody tr:hover {
+  background-color: #f0f4ff;
+}
+
+.tabla-wrap p {
+  margin: 0;
+}
+
+.tabla-wrap img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.tabla-frame {
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .tabla-wrap-inner {
+    min-width: 600px;
+  }
+  .tabla-wrap table {
+    font-size: 0.8rem;
+  }
+}
+
+</style>
+:::
+
+## Datos
+
+La base de datos utilizada en este estudio corresponde al Programa para la Evaluación Internacional de Estudiantes (PISA) del año 2022. Esta base es coordinada por la Organización para la Cooperación y el Desarrollo Económicos (OCDE) y administrada en Chile por el Ministerio de Educación. PISA evalúa a estudiantes de aproximadamente 15 años mediante pruebas estandarizadas por computador y cuestionarios de contexto que recopilan información socioeconómica, emocional y escolar.
+Para la presente investigación se trabaja exclusivamente con la submuestra chilena de PISA 2022, la cual está diseñada mediante un muestreo probabilístico, estratificado y bietápico. En una primera etapa se seleccionan escuelas con probabilidad proporcional a su tamaño dentro de estratos definidos por región, ruralidad y dependencia administrativa. En una segunda etapa se selecciona aleatoriamente a estudiantes elegibles dentro de cada escuela, garantizando representatividad nacional de la población de jóvenes escolarizados de 15 años.
+Luego de filtrar casos de la submuestra de Chile, La muestra final utilizada en los análisis es de 6.488 estudiantes, anidados en 230 escuelas a lo largo del país. Esta estructura jerárquica de los datos sustenta la elección de un modelo multinivel de dos niveles (estudiantes y escuelas). Como base complementaria, se utilizará el archivo técnico de PISA 2022 para asegurar la correcta lectura de ponderadores, variables derivadas y reglas de combinación de los plausible values, disponibles a través de la OCDE.
+
+## Variables
+
+### Variable dependiente
+
+La variable dependiente de esta investigación es el rendimiento en Matemática de los estudiantes de 15 años en Chile. Esta se mide a partir de los valores plausibles de desempeño en Matemática reportados por PISA 2022, construidos mediante modelos de respuesta al ítem (IRT) y diseñados para representar la competencia matemática latente de cada estudiante en la escala internacional de la prueba. Para los análisis descriptivos se resume la distribución del rendimiento a partir de los valores plausibles, mientras que en los modelos de regresión multinivel se siguen las recomendaciones metodológicas de la OCDE para su uso, es decir, se estiman los modelos separadamente para cada valor plausible y luego se combinan los resultados obtenidos. De igual manera, en ambos casos, valores más altos de la escala indican un mejor desempeño en Matemática.
+
+
+### Variables independientes 
+
+Las variables independientes centrales se organizan en torno a dos dimensiones: el origen socioeconómico de los estudiantes y la ansiedad ante Matemáticas, incorporando además sus agregados o promedios a nivel de escuela como indicadores de composición y clima escolar.
+
+En primer lugar, el nivel socioeconómico individual se mide mediante el índice socioeconómico, social y cultural de PISA (ESCS), construido a partir de información sobre el nivel educacional y ocupacional de los padres, junto con recursos materiales y culturales disponibles en el hogar. Se trata de un índice continuo estandarizado a nivel internacional (media cercana a 0 y desviación estándar igual a 1), donde valores más altos reflejan un origen socioeconómico más ventajoso. En la muestra chilena, el índice presenta una media aproximada de -0,2 y un amplio rango de variación entre -4,2 y 2,2, lo que da cuenta de una fuerte heterogeneidad en las condiciones socioeconómicas del estudiantado. Este índice se utiliza como principal medida del origen social de los y las estudiantes.
+
+En segundo lugar, se considera la ansiedad ante Matemáticas como un mecanismo psicológico clave en la relación entre origen social y rendimiento académico. Esta se operacionaliza mediante el índice Mathematics Anxiety (Anxmat),  estimado con modelos de respuesta al ítem utilizando el método Weighted Likelihood Estimate (WLE), que entrega puntajes continuos estandarizados a partir de las respuestas a múltiples ítems. que resume la frecuencia e intensidad de emociones negativas asociadas a situaciones que involucran Matemática. Considerando esto, el índice es de carácter continuo, con valores centrados en torno a 0, en la muestra chilena su media se sitúa en torno a 0,5 puntos y su rango va aproximadamente de -2,4 a 2,6. Valores más altos indican mayores niveles de ansiedad matemática. Esta variable se entiende como un mecanismo potencial que puede mediar o modular el efecto del origen socioeconómico sobre el rendimiento en Matemática.
+
+A nivel de escuela, se incluye el promedio del índice socioeconómico de los y las estudiantes de cada establecimiento como indicador de la composición socioeconómica del centro educativo. Este se calcula como el promedio del índice de todos los estudiantes de la escuela presentes en la muestra PISA Chile. Valores más altos indican escuelas con una mayor concentración de estudiantes de origen socioeconómico alto, mientras que valores más bajos corresponden a establecimientos más desfavorecidos. En la muestra, el Índice socioeconómico promedio de las escuelas oscila aproximadamente entre -2,6 y 1,2, con una media cercana a -0,5, lo que refleja una marcada estratificación entre escuelas. Esta variable permite capturar efectos de composición y posibles procesos de segregación escolar, es decir, si más allá del nivel socioeconómico individual, asistir a escuelas con distinto perfil socioeconómico promedio se asocia a diferencias en ansiedad y rendimiento en Matemática.
+
+Finalmente, se incorpora el promedio de ansiedad matemática de la escuela como indicador del clima emocional frente a la Matemática en cada establecimiento. Este se obtiene calculando el valor medio del índice de ansiedad para los estudiantes de cada escuela presentes, y se interpreta como una medida del clima de ansiedad matemática en el entorno escolar. En la muestra chilena, esta variable presenta una media cercana a 0,5 y una desviación estándar de alrededor de 0,4, con valores que van aproximadamente de -1,7 a 2,2. Valores más altos indican escuelas donde, en promedio, el estudiantado reporta mayores niveles de ansiedad frente a la Matemática, mientras que valores más bajos reflejan un clima emocional menos ansioso. Este indicador permite evaluar si, más allá de la ansiedad individual, la pertenencia a escuelas con climas de mayor o menor ansiedad matemática se asocia diferencialmente al rendimiento en Matemática, capturando así efectos contextuales ligados al ambiente emocional y a las expectativas en torno a esta asignatura.
+
+
+### Variables de control de nivel individual
+
+Además de las variables centrales, se incorporan diversos controles de nivel individual con el fin de aislar de mejor manera la asociación entre origen social, ansiedad y rendimiento, evitando atribuir al nivel socioeconómico o a la ansiedad diferencias que responden a características sociodemográficas o escolares previas.
+
+En primer lugar, se incluye el sexo del estudiante, operacionalizado como una variable dicotómica mujer (1) y  hombre (0). En la muestra chilena la distribución es relativamente equilibrada (51,5% hombres y 48,5% mujeres). Esta variable permite controlar por diferencias de género en ansiedad matemática y rendimiento, ampliamente documentadas en la literatura.
+
+En segundo lugar, se incorpora un indicador de problemas con el aprendizaje autodirigido (selfreg), basado en el índice Probself (Problems with self-directed learning). Este índice continuo recoge dificultades para organizar el estudio, mantener la concentración, completar tareas y gestionar de manera autónoma el proceso de aprendizaje. Valores más altos indican mayores problemas de autorregulación. Se utiliza como control para no confundir la ansiedad específica ante Matemática con dificultades generales en el estudio o en la gestión del tiempo escolar.
+
+En tercer lugar, se considera la repitencia escolar, medida como una variable dicotómica que distingue entre quienes han repetido al menos un curso (1) y quienes nunca han repetido (0). En la muestra analizada, alrededor de un 13% del estudiantado ha repetido algún curso. Dado que la repitencia suele estar asociada a trayectorias escolares marcadas por dificultades de aprendizaje y a contextos socioeconómicos menos favorecidos, se incluye principalmente como control, reconociendo que se trata de un resultado previo situado entre la causa y la consecuencia del bajo rendimiento y la ansiedad.
+
+Adicionalmente, se incorporan dos controles vinculados a la posición lingüística y migratoria. El primero es si el idioma del hogar es distinto al idioma de la prueba, codificado como 0 a quienes reportan hablar español en el hogar (idioma de la prueba en Chile) y como 1 a quienes declaran otro idioma. En la muestra, aproximadamente un 1,5% de los estudiantes se ubica en esta última categoría. Por su parte, el estatus migrante se codifica como estudiantes de primera o segunda generación migrante (1) y nativos (0). Cerca de un 6% del estudiantado se clasifica como migrante. Ambas variables permiten controlar por fuentes adicionales de desventaja o diferenciación asociadas a la condición migratoria y lingüística.
+
+La tabla de descriptivos de nivel individual resume la distribución de todas estas variables, permitiendo caracterizar la muestra en términos socioeconómicos, de ansiedad, trayectoria escolar, género, autorregulación, idioma del hogar y condición migrante. 
+
+Para más información, ver el [Apéndice A](apendices/A.html#sec-anexo-a).
+
+::: { .content-visible when-format="pdf"}
+\begingroup
+\footnotesize   
+
+**Figura 3.1. Tabla de descriptivos de nivel individual.**
+
+| Variable                | Etiqueta                                                   | Resumen estadístico                                                                                                                                                      |
+|:------------------------|:----------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| escs (num.)             | Índice socioeconómico, social y cultural (ESCS)           | Media = -0.2 (DE = 1.0); mediana = -0.2; min/max = [-4.2, 2.2]; RI = 1.6 (CV = -4.1); 5.685 valores distintos; 6.181 casos válidos (95,3 %) y 307 perdidos (4,7 %).      |
+| anxmat (num.)           | Ansiedad ante Matemáticas (ANXMAT, WLE)                   | Media = 0.5 (DE = 1.2); mediana = 0.6; min/max = [-2.4, 2.6]; RI = 1.3 (CV = 2.1); 167 valores distintos; 5.372 válidos (82,8 %) y 1.116 perdidos (17,2 %).              |
+| gender_female (binaria) | Sexo: mujer (=1), hombre (=0)                             | Proporciones: 0 = 3.343 (51,5 %); 1 = 3.145 (48,5 %); media = 0.5; 6.488 válidos (100 %) y 0 perdidos (0 %).                                                             |
+| selfreg (num.)          | Problemas con el aprendizaje autodirigido (PROBSELF, WLE) | Media = 0.3 (DE = 0.9); mediana = 0.4; min/max = [-2.2, 3.1]; RI = 1.0 (CV = 3.1); 2.125 valores distintos; 3.106 válidos (47,9 %) y 3.382 perdidos (52,1 %).           |
+| repitencia_alguna_vez   | Ha repetido al menos un curso (=1)                        | Proporciones: 0 = 5.361 (86,8 %); 1 = 813 (13,2 %); media = 0.1; 6.174 válidos (95,2 %) y 314 perdidos (4,8 %).                                                          |
+| homelang_other (binaria)| Idioma del hogar distinto al idioma de la prueba (=1)     | Proporciones: 0 = 6.104 (98,5 %); 1 = 95 (1,5 %); media ≈ 0; 6.199 válidos (95,5 %) y 289 perdidos (4,5 %).                                                              |
+| migrante (binaria)      | Estudiante migrante (1ª o 2ª generación =1; nativo = 0)   | Proporciones: 0 = 288 (4,8 %); 1 = 5.756 (95,2 %); media ≈ 1.0; 6.044 válidos (93,2 %) y 444 perdidos (6,8 %).                                                           |
+
+\endgroup
+:::
+
+::: {.content-visible when-format="html"}
+<p style="margin:0 0 0.25em 0;">
+  <strong>Figura 3.1.</strong>  Tabla de descriptivos de nivel individual.
+</p>
+
+```{=html}
+<div class="tabla-wrap">
+  <div class="tabla-wrap-inner tabla-html">
+    <iframe
+      class="tabla-frame"
+      src="output/frag/descriptivos_nivel1_tabla.html"
+      scrolling="no"
+      style="height:1400px;">
+    </iframe>
+  </div>
+</div>
+```
+:::
+
+
+
+### Variables de control de nivel escuela
+
+A nivel contextual, además de los promedios de nivel socioeconómico y ansiedad que constituyen variables de interés, se incorporan ciertas variables de control que permiten ajustar por características estructurales e institucionales de los establecimientos.
+
+En primer lugar, se considera el tamaño total de la escuela, que representa el número total de estudiantes matriculados en el establecimiento. En la muestra, las escuelas exhiben una gran variabilidad, con un promedio cercano a 867 estudiantes y valores que van desde establecimientos pequeños hasta colegios con más de 4.000 estudiantes. Esta variable permite controlar por diferencias estructurales asociadas al tamaño, potencialmente vinculadas a la disponibilidad de recursos, al clima escolar y a la organización pedagógica.
+
+En segundo lugar, se incluye el tipo de establecimiento, construido a partir de las variables de PISA sobre administración y propiedad, codificadas en dos categorías principales: escuelas públicas y escuelas privadas. Aproximadamente tres cuartas partes de los establecimientos de la muestra corresponden a escuelas públicas y cerca de un cuarto a escuelas privadas. Esta variable permite considerar diferencias institucionales y de financiamiento asociadas tanto a la composición socioeconómica del alumnado como a las oportunidades de aprendizaje en Matemática.
+
+En tercer lugar, se incorpora un indicador del tipo de comunidad donde se ubica la escuela, basado en la pregunta que distingue entre distintos tamaños y tipos de localidades (aldea o zona rural, pueblo pequeño, ciudad mediana, ciudad grande, megaciudad). Este indicador permite controlar por el entorno territorial inmediato del establecimiento, que puede influir en el acceso a recursos educativos, la segregación residencial y las oportunidades culturales. Para los análisis descriptivos se presentan las categorías originales de PISA, mientras que para los modelos estas se agrupan en categorías más parsimoniosas como rural, urbano pequeño, mediano y urbano grande.. 
+
+Finalmente, se reporta el número de estudiantes por escuela en la muestra PISA, que corresponde al tamaño muestral por establecimiento y no al total de matrícula. Esta variable se utiliza principalmente con fines descriptivos y para ver variabilidad en el número de estudiantes por escuela respecto a la evaluación PISA considerando la estructura multinivel.
+
+A continuacion se presenta la tabla de descriptiva de nivel conextual que resume la distribucion de todas estas variables. 
+
+Para más información, ver el [Apéndice B](apendices/B.html#sec-anexo-b).
+
+
+::: { .content-visible when-format="pdf"}
+
+**Figura 3.2. Tabla de descriptivos de nivel contextual (escuelas).**
+\begingroup
+\footnotesize   
+
+
+| Variable                | Etiqueta                                              | Estadísticas / Valores                                                                                                                                                  | Válido / Perdidos              |
+|:------------------------|:------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
+| escs_promedio (num.)    | ESCS promedio de la escuela                           | Media = -0.4 (DE = 0.8); mediana = -0.5; min/max = [-2.6, 1.2]; RI = 1.2 (CV = -2.1); 230 valores distintos.                                                           | 230 (100.0%) / 0 (0.0%)        |
+| anxmat_promedio (num.)  | Ansiedad matemática promedio (ANXMAT, WLE)            | Media = 0.5 (DE = 0.4); mediana = 0.6; min/max = [-1.7, 2.2]; RI = 0.4 (CV = 0.8); 224 valores distintos.                                                              | 224 (97.4%) / 6 (2.6%)         |
+| n_estudiantes (int)     | N.º de estudiantes en la muestra PISA por escuela     | Media = 28.2 (DE = 12.2); mediana = 33; min/max = [1, 42]; RI = 13.8 (CV = 0.4); 39 valores distintos.                                                                 | 230 (100.0%) / 0 (0.0%)        |
+| tamano_escuela (num.)   | Tamaño total de la escuela (SCHSIZE)                  | Media = 866.9 (DE = 611.2); mediana = 743; min/max = [25, 4050]; RI = 643.5 (CV = 0.7); 205 valores distintos.                                                         | 223 (97.0%) / 7 (3.0%)         |
+| tipo_escuela (factor)   | Tipo de establecimiento (público/privado)             | Categorías:<br>private (n = 53; 23.0%);<br>public (n = 177; 77.0%).                                                                                                     | 230 (100.0%) / 0 (0.0%)        |
+| comunidad_escolar (factor) | Tipo de comunidad donde se ubica la escuela (rural/urbano/otro) | Categorías:<br>(1) A village, hamlet or rural area (n = 6; 2.7%);<br>(2) A small town (n = 11; 4.9%);<br>(3) A town (n = 47; 21.0%);<br>(4) A city (n = 85; 37.9%);<br>(5) A large city (n = 75; 33.5%);<br>otras categorías (6–10) ≈ 0%. | 224 (97.4%) / 6 (2.6%)         |
+
+Nota. Descriptivos de variables de nivel escuela (N = n.º de escuelas).
+
+\endgroup
+:::
+
+::: {.content-visible when-format="html"}
+<p style="margin:0 0 0.25em 0;">
+  <strong>Figura 3.2.</strong> Tabla de descriptivos de nivel contextual (escuelas).
+</p>
+
+```{=html}
+<div class="tabla-wrap">
+  <div class="tabla-wrap-inner tabla-html">
+    <iframe
+      class="tabla-frame"
+      src="output/frag/descriptivos_nivel2_tabla.html"
+      scrolling="no"
+      style="height:1400px;">
+    </iframe>
+  </div>
+</div>
+```
+:::
+
+
+
+## Estrategia de análisis
+
+La metodología empleada en esta investigación es de carácter cuantitativo. El análisis estadístico se realizó en el software R (versión 4.5.0) [@RCoreTeam2024], utilizando principalmente los paquetes lme4 para la estimación de modelos multinivel  [@Bates2015] y summarytools para la generación de tablas descriptivas [@Comtois2024]. Dado que los datos provienen del estudio PISA 2022, se trabaja con una muestra de estudiantes de 15 años matriculados en establecimientos escolares en Chile, lo que implica una estructura jerárquica de estudiantes anidados en escuelas. Este tipo de estructura hace que las observaciones no sean independientes entre sí, ya que estudiantes de una misma escuela comparten recursos, normas, docentes y climas escolares similares. En estas circunstancias, los modelos de regresión multinivel resultan especialmente adecuados para analizar cómo un resultado a nivel individual en este caso del rendimiento en Matemática, se relaciona con variables medidas tanto a nivel del estudiante como a nivel de la escuela [@Fairbrother2014; @Hox2017].
+
+En términos formales, se estiman modelos de regresión lineal multinivel de dos niveles con interceptos aleatorios, donde el nivel 1 corresponde a los y las estudiantes y el nivel 2 a las escuelas. Estos modelos permiten separar la varianza del rendimiento en Matemática en una componente individual y una componente entre escuelas, estimar efectos fijos de las variables independientes en ambos niveles, y modelar la variación aleatoria del intercepto entre establecimientos [@Bell2019]. Como paso inicial, se estima un modelo nulo (sin predictores) para calcular la correlación intraclase (ICC), que indica qué proporción de la varianza total del rendimiento se explica por diferencias entre escuelas. Este diagnóstico es clave para justificar empíricamente el uso de modelos multinivel y para dimensionar la importancia de los efectos contextuales [@Aguinis2013].
+
+A partir de este modelo base, se especifica una secuencia de modelos multinivel orientados a responder las preguntas de investigación y contrastar las hipótesis planteadas. En primer lugar, se estiman modelos con efectos directos de nivel individual, incorporando el índice socioeconómico, social y cultural y el índice de ansiedad ante Matemáticas como predictores centrales del rendimiento en Matemática, junto con un conjunto de variables de control individuales: sexo, problemas con el aprendizaje autodirigido, repitencia de curso, idioma del hogar distinto al idioma de la prueba y condición migrante. Estos modelos permiten evaluar en qué medida el rendimiento promedio en Matemática se asocia con el origen social y la ansiedad matemática de cada estudiante, controlando por diferencias sociodemográficas y educativas a nivel individual.
+
+En segundo lugar, se incorporan predictores de nivel escolar con el fin de capturar efectos contextuales. En particular, se incluyen el nivel socioeconómico promedio de la escuela como indicador de composición socioeconómica del establecimiento y el promedio de ansiedad matemática como indicador del clima de ansiedad ante Matemáticas en la escuela. A estas variables se suman controles de nivel 2: tamaño del establecimiento, número de estudiantes de la muestra PISA por escuela, tipo de establecimiento (público/privado) y tipo de comunidad donde se ubica la escuela. De este modo, es posible evaluar si el rendimiento en Matemática se relaciona no sólo con las características individuales del estudiantado, sino también con las condiciones socioeconómicas y emocionales promedio de los establecimientos en que estudian [@TrevinoValenzuelaVillalobos2018; @BayramOzdemir2020].
+
+Finalmente, dada la relevancia teórica de los mecanismos de desigualdad y estratificación escolar, se estiman modelos con interacciones entre niveles para analizar posibles efectos de moderación [@Hayes2022; @Hox2017]. En particular, se explora si la asociación entre el origen social individual y el rendimiento varía en función de la composición socioeconómica de la escuela, así como si la relación entre la ansiedad matemática individual y el rendimiento depende del clima de ansiedad promedio del establecimiento. Estas interacciones permiten evaluar si ciertos entornos escolares amplifican o amortiguan los efectos de las desventajas socioeconómicas y de la ansiedad matemática sobre el desempeño en Matemática, articulando así los efectos individuales y contextuales en una perspectiva plenamente multinivel [@Aguinis2013; @Fairbrother2014].
+
+A continuación, se presenta el modelo multinivel propuesto que integra los efectos individuales y contextuales del nivel socioeconómico y la ansiedad ante Matemática sobre el rendimiento.
+
+**Figura 3.3:** Modelo multinivel
+
+$$
+\large
+\begin{aligned}
+Y_{ij} &= \gamma_{00}
++ \gamma_{10} ESCS_{ij}
++ \gamma_{20} ANXMAT_{ij}
++ \gamma_{01} \overline{ESCS}_{j}
++ \gamma_{02} \overline{ANXMAT}_{j} \\
+&\quad
++ \gamma_{11}\, ESCS_{ij}\,\overline{ESCS}_{j}
++ \gamma_{21}\, ANXMAT_{ij}\,\overline{ANXMAT}_{j} \\
+&\quad
++ \beta' W_{ij}
++ \delta' V_{j}
++ u_{0j}
++ u_{1j} ESCS_{ij}
++ u_{2j} ANXMAT_{ij}
++ e_{ij}
+\end{aligned}
+$$ 

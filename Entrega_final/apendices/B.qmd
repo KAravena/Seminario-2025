@@ -1,0 +1,21 @@
+# Estadísticos descriptivos – Nivel 2  {#sec-anexo-b}
+
+::: {.content-visible when-format="html"}
+{{< include ../output/tabla_descriptivos_nivel2.html >}}
+:::
+
+::: {.content-visible when-format="pdf"}
+\begingroup
+\footnotesize   
+
+**Tabla B. Estadísticos descriptivos – Nivel 2 (escuelas)**
+
+| Variable                                                   |   N |   Mín. |   P25 | Mediana | Media |   P75 |  Máx. |    DE |
+|:-----------------------------------------------------------|----:|------:|------:|-------:|------:|------:|-----:|------:|
+| ESCS promedio de la escuela                                | 230 | -2.59 | -0.95 |  -0.47 | -0.37 |  0.22 |  1.21 |  0.78 |
+| Ansiedad matemática promedio de la escuela (ANXMAT, WLE)   | 224 | -1.67 |  0.32 |   0.56 |  0.54 |  0.77 |  2.23 |  0.44 |
+| N.º de estudiantes en la muestra PISA por escuela          | 230 |  1.00 | 23.25 |  33.00 | 28.21 | 37.00 | 42.00 | 12.23 |
+| Tamaño total de la escuela (matrícula, SCHSIZE)            | 223 | 25.00 |458.50 | 743.00 |866.95 |1102.00|4050.00|611.16 |
+
+\endgroup
+:::

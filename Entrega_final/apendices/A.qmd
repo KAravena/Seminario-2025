@@ -1,0 +1,26 @@
+# Estadísticos descriptivos – Nivel 1 {#sec-anexo-a}
+
+
+::: {.content-visible when-format="html"}
+{{< include ../output/tabla_descriptivos_nivel1.html >}}
+:::
+
+
+::: {.content-visible when-format="pdf"}
+\begingroup
+\footnotesize  
+
+**Tabla A. Estadísticos descriptivos – Nivel 1 (estudiantes)**
+
+| Variable                                                          |   N  |  Mín. |   P25 | Mediana | Media |   P75 |  Máx. |   DE |
+|:------------------------------------------------------------------|----:|-----:|-----:|-------:|------:|------:|-----:|-----:|
+| Índice socioeconómico, social y cultural (ESCS)                   | 6181 | -4.22 | -0.99 |  -0.21 | -0.24 |  0.58 |  2.24 |  1.00 |
+| Ansiedad ante Matemáticas (ANXMAT, WLE)                           | 5372 | -2.39 | -0.12 |   0.57 |  0.55 |  1.14 |  2.63 |  1.16 |
+| Sexo: mujer (=1), hombre (=0)                                     | 6488 |  0.00 |  0.00 |   0.00 |  0.48 |  1.00 |  1.00 |  0.50 |
+| Problemas con el aprendizaje autodirigido (PROBSELF, WLE)        | 3106 | -2.23 | -0.13 |   0.41 |  0.30 |  0.89 |  3.10 |  0.95 |
+| Ha repetido al menos un curso (=1)                                | 6174 |  0.00 |  0.00 |   0.00 |  0.13 |  0.00 |  1.00 |  0.34 |
+| Idioma del hogar distinto al idioma de la prueba (=1)             | 6199 |  0.00 |  0.00 |   0.00 |  0.02 |  0.00 |  1.00 |  0.12 |
+| Estudiante migrante (1ª o 2ª generación =1; nativo = 0)          | 6044 |  0.00 |  1.00 |   1.00 |  0.95 |  1.00 |  1.00 |  0.21 |
+
+\endgroup
+:::
