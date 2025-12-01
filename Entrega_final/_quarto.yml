@@ -3,7 +3,7 @@
 
 project:
   type: book
-  output-dir: docs        # Cambia si publicas el libro en otra carpeta (ej. dist/)
+  output-dir: dist        # Cambia si publicas el libro en otra carpeta (ej. dist/)
   resources:
     - assets/favicon-2025-20251031.svg  # Asegura que el favicon versionado llegue a docs/
 
