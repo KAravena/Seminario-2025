@@ -24,3 +24,13 @@ A continuación, se presenta el contenido principal de los archivos de trabajo d
 * **Metodología:** Modelos **Multinivel** (Estudiante/Escuela) aplicados a datos PISA 2022.
 * **Enlace a la Presentación:**
     [Ver Presentación del Exposé](https://karavena.github.io/Seminario-2025/Expos%C3%A9/index.html)
+
+### Seminario de grado: Ansiedad matemática, Nivel socioeconomico y rendimiento en PISA 2022.
+
+* **Título tentativo:** **"Ansiedad en matemática y rendimiento: gradientes socioeconómicos en estudiantes chilenos según PISA 2022"**.
+* **Problema de investigación:** Explorar cómo se vinculan el nivel socioeconómico del hogar, la ansiedad ante la matemática y el rendimiento en Matemática en estudiantes chilenos, considerando diferencias entre escuelas.
+* **Objetivo general:** Analizar la asociación entre el nivel socioeconómico y el rendimiento en Matemática, examinando el papel de la ansiedad matemática individual y del clima de ansiedad del establecimiento, sin pretensiones causales.
+* **Enfoque teórico:** Gradientes socioeconómicos en educación, enfoques psicoeducativos sobre ansiedad matemática y perspectivas multinivel sobre desigualdad escolar.
+* **Metodología:** Modelos multinivel (estudiante/escuela) aplicados a datos PISA 2022 para Chile, con énfasis en la comparación entre efectos individuales y contextuales.
+* **Estado del proyecto:** Seminario finalizado (Universidad de Chile, 2025), articulado con formación cuantitativa avanzada y énfasis en investigación reproducible.
+  [Ver Seminario de grado](https://karavena.github.io/Seminario-2025/Entrega_final/dist/)
