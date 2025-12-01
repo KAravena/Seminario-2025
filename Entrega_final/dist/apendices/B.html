@@ -382,18 +382,33 @@ p {
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggles = Array.from(
-      document.querySelectorAll("#quarto-sidebar .sidebar-item-toggle")
-    );
-    toggles.forEach((btn) => {
-      const labelEl = btn.parentElement?.querySelector(".sidebar-item-text");
-      const label = labelEl ? labelEl.textContent.trim().toLowerCase() : "";
-      if (label && label.includes("apéndice") && btn.getAttribute("aria-expanded") === "true") {
-        btn.click();
-      }
+  // Mantener Apéndices colapsado desde el inicio (sin parpadeo)
+  (() => {
+    const observer = new MutationObserver(() => {
+      const appendixSection = document.getElementById("quarto-sidebar-section-1");
+      if (!appendixSection) return;
+
+      appendixSection.classList.remove("show");
+      appendixSection.classList.add("collapse");
+      appendixSection.style.display = "none";
+
+      const relatedToggles = document.querySelectorAll(
+        `[data-bs-target="#${appendixSection.id}"]`
+      );
+      relatedToggles.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+
+      appendixSection.addEventListener("shown.bs.collapse", () => {
+        appendixSection.style.display = "block";
+      });
+      appendixSection.addEventListener("hidden.bs.collapse", () => {
+        appendixSection.style.display = "none";
+      });
+
+      observer.disconnect();
     });
-  });
+
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+  })();
 </script>
 <style>
   body.index-meta #title-block-header .quarto-title-meta,
