@@ -1,8 +1,8 @@
 # Proyecto de Investigación: Brecha Socioeconómica y Rendimiento en Matemática
 
-Este repositorio documenta el proyecto de investigación enfocado en analizar la relación entre el **Nivel Socioeconómico (NSE)**, la **Composición Escolar** y  lael **Rendimiento en Matemática** de estudiantes chilenos, utilizando la base de datos **PISA 2022**. El foco está en identificar los **mecanismos psicoeducativos** (como la ansiedad) que median o moderan estas brechas estructurales.
-
 La presente investigación se enmarca en mí seminario para optar al grado de Licenciatura en Sociología de la Universidad de Chile. El trabajo fue desarrollado en el Departamento de Sociología y cuenta con la supervisión del profesor guía, Dr. Juan Carlos Castillo Valenzuela.
+
+Este repositorio documenta el proyecto de investigación enfocado en analizar la relación entre el **Nivel Socioeconómico (NSE)**, la **Composición Escolar** y  lael **Rendimiento en Matemática** de estudiantes chilenos, utilizando la base de datos **PISA 2022**. El foco está en identificar los **mecanismos psicoeducativos** (como la ansiedad) que median o moderan estas brechas estructurales.
 
 ---
 
