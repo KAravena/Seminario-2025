@@ -34,4 +34,4 @@ A continuación, se presenta el contenido principal de los archivos de trabajo d
 * **Metodología:** Modelos multinivel (estudiante/escuela) aplicados a datos PISA 2022 para Chile, con énfasis en la comparación entre efectos individuales y contextuales.
 * **Herramientas y reporte:** El informe se elabora en **Quarto** utilizando la plantilla [ReportesFACSO_plantillaQuarto](https://github.com/KAravena/ReportesFACSO_plantillaQuarto), adaptada y modificada según las necesidades del seminario, a partir del trabajo desarrollado en el Laboratorio de Investigación Social (LISA-COES).
 * **Estado del proyecto:** Seminario finalizado (Universidad de Chile, 2025), articulado con formación cuantitativa avanzada y énfasis en investigación reproducible.
-    [Ver Seminario de grado] (https://karavena.github.io/Seminario-2025/Entrega_final/dist/)
+    [Ver Seminario de grado](https://karavena.github.io/Seminario-2025/Entrega_final/dist/)
