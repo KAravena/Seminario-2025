@@ -25,7 +25,7 @@ A continuación, se presenta el contenido principal de los archivos de trabajo d
 * **Enlace a la Presentación:**
     [Ver Presentación del Exposé](https://karavena.github.io/Seminario-2025/Expos%C3%A9/index.html)
 
-### Seminario de grado: Ansiedad matemática, Nivel socioeconomico y rendimiento en PISA 2022.
+### Seminario de grado: Entrega final, Ansiedad matemática, Nivel socioeconomico y rendimiento en PISA 2022.
 
 * **Título tentativo:** **"Ansiedad en matemática y rendimiento: gradientes socioeconómicos en estudiantes chilenos según PISA 2022"**.
 * **Problema de investigación:** Explorar cómo se vinculan el nivel socioeconómico del hogar, la ansiedad ante la matemática y el rendimiento en Matemática en estudiantes chilenos, considerando diferencias entre escuelas.
