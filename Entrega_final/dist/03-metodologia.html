@@ -397,17 +397,25 @@ p {
 
 
   #quarto-sidebar .sidebar-menu-container .menu-text .chapter-number,
-
   #quarto-sidebar .sidebar-menu-container .menu-text .chapter-title {
-
     font-size: 0.96rem !important;
-
   }
-
 </style>
 
-
-
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggles = Array.from(
+      document.querySelectorAll("#quarto-sidebar .sidebar-item-toggle")
+    );
+    toggles.forEach((btn) => {
+      const labelEl = btn.parentElement?.querySelector(".sidebar-item-text");
+      const label = labelEl ? labelEl.textContent.trim().toLowerCase() : "";
+      if (label && label.includes("apéndice") && btn.getAttribute("aria-expanded") === "true") {
+        btn.click();
+      }
+    });
+  });
+</script>
 <style>
   body.index-meta #title-block-header .quarto-title-meta,
   body.index-meta #title-block-header .quarto-title-meta-author {
