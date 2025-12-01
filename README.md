@@ -4,6 +4,8 @@ Este repositorio documenta el proyecto de investigación enfocado en analizar la
 
 El foco está en identificar los **mecanismos psicoeducativos** (como la ansiedad) que median o moderan estas brechas estructurales.
 
+La presente investigación se enmarca en mí seminario para optar al grado de Licenciatura en Sociología de la Universidad de Chile. El trabajo fue desarrollado en el Departamento de Sociología y cuenta con la supervisión del profesor guía, Dr. Juan Carlos Castillo Valenzuela.
+
 ---
 
 ## Resumen de Presentaciones
