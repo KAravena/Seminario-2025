@@ -1,4 +1,4 @@
-<!-- Estilos embebidos para refinar la tipografía y el acabado del panel lateral -->
+<!-- Estilos embebidos para refinar la tipografia y el acabado del panel lateral -->
 <style>
   #quarto-sidebar {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 245, 252, 0.92));
@@ -6,6 +6,35 @@
     box-shadow: 4px 0 20px -15px rgba(15, 31, 53, 0.45);
     padding-inline: 1.35rem;
     font-family: "Inter", "Source Sans Pro", "Segoe UI", system-ui, -apple-system, sans-serif;
+    scrollbar-color: rgba(0, 47, 108, 0.2) transparent; /* Barra mas suave en Firefox */
+    scrollbar-width: thin;
+  }
+
+  /* Oculta la barra vertical solo cuando queremos que no se muestre */
+  #quarto-sidebar.no-scrollbar {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE/Edge heredado */
+  }
+
+  #quarto-sidebar.no-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* Estilo claro del scrollbar cuando se muestra */
+  #quarto-sidebar::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  #quarto-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(0, 47, 108, 0.2);
+    border-radius: 999px;
+    border: 2px solid transparent;
+  }
+
+  #quarto-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 47, 108, 0.28);
   }
 
   #quarto-sidebar .sidebar-header {
@@ -52,7 +81,7 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
   }
 
-  /* Alargar el botón de PDF para dar formato de pastilla */
+  /* Alargar el boton de PDF para dar formato de pastilla */
   #quarto-sidebar .sidebar-tools-main .quarto-navigation-tool[title*="PDF"],
   #quarto-sidebar .sidebar-tools-main .quarto-navigation-tool[aria-label*="PDF"] {
     min-width: 60px;
@@ -91,7 +120,7 @@
     color: var(--ink) !important;
     padding: 0.28rem 0;
     border-left: 2px solid transparent;
-    transition: all 0.18s ease-in-out;
+    transition: color 0.18s ease-in-out, border-color 0.18s ease-in-out, background-color 0.18s ease-in-out;
     font-family: "Times New Roman", "TeX Gyre Termes", "Libre Baskerville", Georgia, serif;
     letter-spacing: 0.012em;
     word-spacing: 0.18rem;
@@ -128,7 +157,6 @@
   #quarto-sidebar .sidebar-menu-container .sidebar-link:focus {
     color: var(--facso) !important;
     border-left-color: var(--facso);
-    padding-left: 0.35rem;
     background: rgba(0, 47, 108, 0.08);
     border-radius: 0.3rem;
   }
@@ -146,31 +174,36 @@
 </style>
 
 <script>
-  // Mantener Apéndices colapsado desde el inicio (sin parpadeo)
-  (() => {
-    const observer = new MutationObserver(() => {
+  // Mantener Apendices colapsado desde el inicio (sin parpadeo)
+  document.addEventListener("DOMContentLoaded", () => {
+    const ensureSetup = () => {
+      const sidebar = document.getElementById("quarto-sidebar");
       const appendixSection = document.getElementById("quarto-sidebar-section-1");
-      if (!appendixSection) return;
+      if (!sidebar || !appendixSection) {
+        requestAnimationFrame(ensureSetup);
+        return;
+      }
 
       appendixSection.classList.remove("show");
       appendixSection.classList.add("collapse");
-      appendixSection.style.display = "none";
+      appendixSection.style.removeProperty("display");
 
       const relatedToggles = document.querySelectorAll(
         `[data-bs-target="#${appendixSection.id}"]`
       );
       relatedToggles.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
 
-      appendixSection.addEventListener("shown.bs.collapse", () => {
-        appendixSection.style.display = "block";
-      });
-      appendixSection.addEventListener("hidden.bs.collapse", () => {
-        appendixSection.style.display = "none";
-      });
+      const updateScrollbar = () => {
+        const isOpen = appendixSection.classList.contains("show");
+        sidebar.classList.toggle("no-scrollbar", !isOpen);
+      };
 
-      observer.disconnect();
-    });
+      updateScrollbar();
 
-    observer.observe(document.documentElement, { childList: true, subtree: true });
-  })();
+      appendixSection.addEventListener("shown.bs.collapse", updateScrollbar);
+      appendixSection.addEventListener("hidden.bs.collapse", updateScrollbar);
+    };
+
+    requestAnimationFrame(ensureSetup);
+  });
 </script>

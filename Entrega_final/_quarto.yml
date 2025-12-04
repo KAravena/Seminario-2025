@@ -15,7 +15,7 @@ book:
   author:
     - name: Katherine Aravena Herrera
       affiliation: Departamento de Sociologia, Universidad de Chile
-  date: today              # Usa fecha fija (YYYY-MM-DD) si necesitas control editorial
+  date: 2025-12-01              # Usa fecha fija (YYYY-MM-DD) si necesitas control editorial
   date-format: D [de] MMMM [de] YYYY
   doi: ""
   sidebar:
