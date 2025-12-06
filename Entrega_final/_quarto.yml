@@ -8,8 +8,8 @@ project:
     - assets/favicon-2025-20251031.svg  # Asegura que el favicon versionado llegue a docs/
 
 book:
-  title: "Ansiedad en matemática y rendimiento"
-  subtitle: "Diferencias según nivel socioeconómico en estudiantes chilenos"
+  title: "Ansiedad matemática y rendimiento en estudiantes chilenos"
+  subtitle: "Diferencias socioeconómicas en un sistema escolar altamente estratificado"
   output-file: reportes-facso-plantilla
   repo-url: "https://github.com/KAravena/Seminario-2025"
   author:
