@@ -1625,6 +1625,25 @@ Nota. Descriptivos de variables de nivel escuela (N = n.º de escuelas).
 
 \endgroup
 
+Como un ultimo punto respecto a las variables, en los modelos multinivel
+todas las variables continuas se trabajan centradas para separar con
+claridad los efectos individuales y contextuales. En particular, los
+predictores de nivel individual (estudiante) se descomponen en una
+componente individual (desviación del valor del estudiante respecto del
+promedio de su escuela) y una componente contextual (promedio de la
+variable en cada establecimiento). De este modo, la parte individual se
+centra en la media del centro educativo, lo que permite interpretar sus
+pendientes como efectos estrictamente dentro de escuela, mientras que
+sus promedios escolares capturan diferencias entre escuelas
+(\citeproc{ref-EndersTofighi2007}{Enders \& Tofighi, 2007};
+\citeproc{ref-RaudenbushBryk2002}{Raudenbush \& Bryk, 2002};
+\citeproc{ref-SnijdersBosker2012}{Snijders \& Bosker, 2012}).
+Adicionalmente, los predictores continuos de nivel contextual se centran
+en su media muestral o gran media, facilitando la interpretación de los
+interceptos y reduciendo la colinealidad entre términos principales e
+interacciones (\citeproc{ref-Bell2019}{Bell et~al., 2019};
+\citeproc{ref-EndersTofighi2007}{Enders \& Tofighi, 2007}).
+
 \section{Estrategia de análisis}\label{estrategia-de-anuxe1lisis}
 
 La metodología empleada en esta investigación es de carácter
@@ -1642,7 +1661,7 @@ independientes entre sí, ya que estudiantes de una misma escuela
 comparten recursos, normas, docentes y climas escolares similares. En
 estas circunstancias, los modelos de regresión multinivel resultan
 especialmente adecuados para analizar cómo un resultado a nivel
-individual en este caso del rendimiento en Matemática, se relaciona con
+individual, en este caso el rendimiento en Matemática, se relaciona con
 variables medidas tanto a nivel del estudiante como a nivel de la
 escuela (\citeproc{ref-Fairbrother2014}{Fairbrother, 2014};
 \citeproc{ref-Hox2017}{Hox et~al., 2017b}).
@@ -1652,7 +1671,7 @@ de dos niveles con interceptos aleatorios, donde el nivel 1 corresponde
 a los y las estudiantes y el nivel 2 a las escuelas. Estos modelos
 permiten separar la varianza del rendimiento en Matemática en una
 componente individual y una componente entre escuelas, estimar efectos
-fijos de las variables independientes en ambos niveles, y modelar la
+fijos de las variables independientes en ambos niveles y modelar la
 variación aleatoria del intercepto entre establecimientos
 (\citeproc{ref-Bell2019}{Bell et~al., 2019}). Como paso inicial, se
 estima un modelo nulo (sin predictores) para calcular la correlación
@@ -1691,8 +1710,8 @@ emocionales promedio de los establecimientos en que estudian
 (\citeproc{ref-BayramOzdemir2020}{Bayram-Ozdemir \& Özdemir, 2020};
 \citeproc{ref-TrevinoValenzuelaVillalobos2018}{Treviño et~al., 2018}).
 
-Finalmente, dada la relevancia teórica de los mecanismos de desigualdad
-y estratificación escolar, se estiman modelos con interacciones entre
+Dada la relevancia teórica de los mecanismos de desigualdad y
+estratificación escolar, se estiman modelos con interacciones entre
 niveles para analizar posibles efectos de moderación
 (\citeproc{ref-Hayes2022}{Hayes, 2022}; \citeproc{ref-Hox2017}{Hox
 et~al., 2017b}). En particular, se explora si la asociación entre el
@@ -1707,30 +1726,58 @@ individuales y contextuales en una perspectiva plenamente multinivel
 (\citeproc{ref-Aguinis2013}{Aguinis et~al., 2013};
 \citeproc{ref-Fairbrother2014}{Fairbrother, 2014}).
 
+Finalmente, y con el propósito de explorar la heterogeneidad en el
+efecto de la ansiedad matemática entre escuelas, se estiman modelos
+multinivel con pendientes aleatorias para la ansiedad matemática a nivel
+individual, permitiendo que la asociación entre ansiedad matemática y
+rendimiento en Matemática varíe entre establecimientos
+(\citeproc{ref-RaudenbushBryk2002}{Raudenbush \& Bryk, 2002};
+\citeproc{ref-SnijdersBosker2012}{Snijders \& Bosker, 2012}). La
+comparación entre modelos con y sin pendientes aleatorias, mediante
+pruebas de razón de verosimilitudes y test de desvianza, permite evaluar
+si la inclusión de estas pendientes mejora significativamente el ajuste
+del modelo (\citeproc{ref-Bell2019}{Bell et~al., 2019}).
+
+Sobre esta base, se incorporan interacciones de segundo orden entre la
+ansiedad matemática individual y características del contexto escolar
+(nivel socioeconómico promedio del establecimiento, clima promedio de
+ansiedad y tipo de escuela). Esto permite analizar si el efecto negativo
+de la ansiedad sobre el rendimiento es más intenso en ciertos tipos de
+escuelas, por ejemplo, en establecimientos con alta concentración de
+estudiantes de nivel socioeconómico bajo o con climas emocionales más
+ansiosos, modelando así la manera en que los contextos escolares pueden
+amplificar o atenuar el impacto de la ansiedad matemática sobre el
+desempeño (\citeproc{ref-Aguinis2013}{Aguinis et~al., 2013};
+\citeproc{ref-EndersTofighi2007}{Enders \& Tofighi, 2007};
+\citeproc{ref-Hayes2022}{Hayes, 2022}).
+
 A continuación, se presenta el modelo multinivel propuesto que integra
 los efectos individuales y contextuales del nivel socioeconómico y la
-ansiedad ante Matemática sobre el rendimiento.
+ansiedad ante Matemática sobre el rendimiento con pendientes aleatorias
+e interacciones cruzadas
 
 \textbf{Figura 3.3:} Modelo multinivel
 
 \[
-\large
 \begin{aligned}
 Y_{ij} &= \gamma_{00}
 + \gamma_{10} ESCS_{ij}
 + \gamma_{20} ANXMAT_{ij}
 + \gamma_{01} \overline{ESCS}_{j}
-+ \gamma_{02} \overline{ANXMAT}_{j} \\
++ \gamma_{02} \overline{ANXMAT}_{j}
++ \gamma_{03} TYPE_{j} \\
 &\quad
 + \gamma_{11}\, ESCS_{ij}\,\overline{ESCS}_{j}
-+ \gamma_{21}\, ANXMAT_{ij}\,\overline{ANXMAT}_{j} \\
++ \gamma_{21}\, ANXMAT_{ij}\,\overline{ANXMAT}_{j}
++ \gamma_{23}\, ANXMAT_{ij}\,TYPE_{j} \\
 &\quad
-+ \beta' W_{ij}
-+ \delta' V_{j}
++ \mathbf{W}_{ij}^{\top}\beta
++ \mathbf{V}_{j}^{\top}\delta \\
+&\quad
 + u_{0j}
 + u_{1j} ESCS_{ij}
 + u_{2j} ANXMAT_{ij}
-+ e_{ij}
++ e_{ij}.
 \end{aligned}
 \]
 
@@ -1827,7 +1874,7 @@ Adolescence}, \emph{49}(6), 1328-1340.
 \bibitem[\citeproctext]{ref-Bell2019}
 Bell, A., Fairbrother, M., \& Jones, K. (2019). Fixed and Random Effects
 Models: Making an Informed Choice. \emph{Quality \& Quantity},
-\emph{53}(2), 1051-1074. \url{https://doi.org/10.1007/s11135-018-0802-x}
+\emph{53}, 1051-1074. \url{https://doi.org/10.1007/s11135-018-0802-x}
 
 \bibitem[\citeproctext]{ref-Bellei2013}
 Bellei, C. (2013). El gran experimento: Mercado y privatizaci{ó}n de la
@@ -1976,6 +2023,12 @@ Ministerio de Hacienda, Gobierno de Chile.
 Dowker, A., Sarkar, A., \& Looi, C. I. (2016). Mathematics Anxiety: What
 Have We Learned in 60 Years? \emph{Frontiers in Psychology}, \emph{7},
 508.
+
+\bibitem[\citeproctext]{ref-EndersTofighi2007}
+Enders, C. K., \& Tofighi, D. (2007). Centering Predictor Variables in
+Cross-Sectional Multilevel Models: A New Look at an Old Issue.
+\emph{Psychological Methods}, \emph{12}(2), 121-138.
+\url{https://doi.org/10.1037/1082-989X.12.2.121}
 
 \bibitem[\citeproctext]{ref-Eysenck2007}
 Eysenck, M. W., Derakshan, N., Santos, R., \& Calvo, M. G. (2007).
@@ -2264,6 +2317,11 @@ educational psychology}, \emph{80}, 121-135.
 Sammallahti, E., Finell, J., Jonsson, B., \& Korhonen, J. (2023). A
 Meta-Analysis of Math Anxiety Interventions. \emph{Journal of Numerical
 Cognition}, \emph{9}(2), 346-362. \url{https://doi.org/10.5964/jnc.8401}
+
+\bibitem[\citeproctext]{ref-SnijdersBosker2012}
+Snijders, T. A. B., \& Bosker, R. J. (2012). \emph{Multilevel Analysis:
+An Introduction to Basic and Advanced Multilevel Modeling} (2.ª ed.).
+Sage.
 
 \bibitem[\citeproctext]{ref-Stella2021}
 Stella, M. (2021). Network Psychometrics and Cognitive Network Science

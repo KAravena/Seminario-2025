@@ -218,41 +218,47 @@ Nota. Descriptivos de variables de nivel escuela (N = n.º de escuelas).
 ```
 :::
 
-
+Como un ultimo punto respecto a las variables, en los modelos multinivel todas las variables continuas se trabajan centradas para separar con claridad los efectos individuales y contextuales. En particular, los predictores de nivel individual (estudiante) se descomponen en una componente individual (desviación del valor del estudiante respecto del promedio de su escuela) y una componente contextual (promedio de la variable en cada establecimiento). De este modo, la parte individual se centra en la media del centro educativo, lo que permite interpretar sus pendientes como efectos estrictamente dentro de escuela, mientras que sus promedios escolares capturan diferencias entre escuelas [@EndersTofighi2007; @RaudenbushBryk2002; @SnijdersBosker2012]. Adicionalmente, los predictores continuos de nivel contextual se centran en su media muestral o gran media, facilitando la interpretación de los interceptos y reduciendo la colinealidad entre términos principales e interacciones [@EndersTofighi2007; @Bell2019].
 
 ## Estrategia de análisis
 
-La metodología empleada en esta investigación es de carácter cuantitativo. El análisis estadístico se realizará en el software R (versión 4.5.0) [@RCoreTeam2024], utilizando principalmente los paquetes lme4 para la estimación de modelos multinivel  [@Bates2015] y summarytools para la generación de tablas descriptivas [@Comtois2024]. Dado que los datos provienen del estudio PISA 2022, se trabaja con una muestra de estudiantes de 15 años matriculados en establecimientos escolares en Chile, lo que implica una estructura jerárquica de estudiantes anidados en escuelas. Este tipo de estructura hace que las observaciones no sean independientes entre sí, ya que estudiantes de una misma escuela comparten recursos, normas, docentes y climas escolares similares. En estas circunstancias, los modelos de regresión multinivel resultan especialmente adecuados para analizar cómo un resultado a nivel individual en este caso del rendimiento en Matemática, se relaciona con variables medidas tanto a nivel del estudiante como a nivel de la escuela [@Fairbrother2014; @Hox2017].
+La metodología empleada en esta investigación es de carácter cuantitativo. El análisis estadístico se realizará en el software R (versión 4.5.0) [@RCoreTeam2024], utilizando principalmente los paquetes lme4 para la estimación de modelos multinivel [@Bates2015] y summarytools para la generación de tablas descriptivas [@Comtois2024]. Dado que los datos provienen del estudio PISA 2022, se trabaja con una muestra de estudiantes de 15 años matriculados en establecimientos escolares en Chile, lo que implica una estructura jerárquica de estudiantes anidados en escuelas. Este tipo de estructura hace que las observaciones no sean independientes entre sí, ya que estudiantes de una misma escuela comparten recursos, normas, docentes y climas escolares similares. En estas circunstancias, los modelos de regresión multinivel resultan especialmente adecuados para analizar cómo un resultado a nivel individual, en este caso el rendimiento en Matemática, se relaciona con variables medidas tanto a nivel del estudiante como a nivel de la escuela [@Fairbrother2014; @Hox2017].
 
-En términos formales, se estiman modelos de regresión lineal multinivel de dos niveles con interceptos aleatorios, donde el nivel 1 corresponde a los y las estudiantes y el nivel 2 a las escuelas. Estos modelos permiten separar la varianza del rendimiento en Matemática en una componente individual y una componente entre escuelas, estimar efectos fijos de las variables independientes en ambos niveles, y modelar la variación aleatoria del intercepto entre establecimientos [@Bell2019]. Como paso inicial, se estima un modelo nulo (sin predictores) para calcular la correlación intraclase (ICC), que indica qué proporción de la varianza total del rendimiento se explica por diferencias entre escuelas. Este diagnóstico es clave para justificar empíricamente el uso de modelos multinivel y para dimensionar la importancia de los efectos contextuales [@Aguinis2013].
+En términos formales, se estiman modelos de regresión lineal multinivel de dos niveles con interceptos aleatorios, donde el nivel 1 corresponde a los y las estudiantes y el nivel 2 a las escuelas. Estos modelos permiten separar la varianza del rendimiento en Matemática en una componente individual y una componente entre escuelas, estimar efectos fijos de las variables independientes en ambos niveles y modelar la variación aleatoria del intercepto entre establecimientos [@Bell2019]. Como paso inicial, se estima un modelo nulo (sin predictores) para calcular la correlación intraclase (ICC), que indica qué proporción de la varianza total del rendimiento se explica por diferencias entre escuelas. Este diagnóstico es clave para justificar empíricamente el uso de modelos multinivel y para dimensionar la importancia de los efectos contextuales [@Aguinis2013].
 
 A partir de este modelo base, se especifica una secuencia de modelos multinivel orientados a responder las preguntas de investigación y contrastar las hipótesis planteadas. En primer lugar, se estiman modelos con efectos directos de nivel individual, incorporando el índice socioeconómico, social y cultural y el índice de ansiedad ante Matemáticas como predictores centrales del rendimiento en Matemática, junto con un conjunto de variables de control individuales: sexo, problemas con el aprendizaje autodirigido, repitencia de curso, idioma del hogar distinto al idioma de la prueba y condición migrante. Estos modelos permiten evaluar en qué medida el rendimiento promedio en Matemática se asocia con el origen social y la ansiedad matemática de cada estudiante, controlando por diferencias sociodemográficas y educativas a nivel individual.
 
 En segundo lugar, se incorporan predictores de nivel escolar con el fin de capturar efectos contextuales. En particular, se incluyen el nivel socioeconómico promedio de la escuela como indicador de composición socioeconómica del establecimiento y el promedio de ansiedad matemática como indicador del clima de ansiedad ante Matemáticas en la escuela. A estas variables se suman controles de nivel 2: tamaño del establecimiento, número de estudiantes de la muestra PISA por escuela, tipo de establecimiento (público/privado) y tipo de comunidad donde se ubica la escuela. De este modo, es posible evaluar si el rendimiento en Matemática se relaciona no sólo con las características individuales del estudiantado, sino también con las condiciones socioeconómicas y emocionales promedio de los establecimientos en que estudian [@TrevinoValenzuelaVillalobos2018; @BayramOzdemir2020].
 
-Finalmente, dada la relevancia teórica de los mecanismos de desigualdad y estratificación escolar, se estiman modelos con interacciones entre niveles para analizar posibles efectos de moderación [@Hayes2022; @Hox2017]. En particular, se explora si la asociación entre el origen social individual y el rendimiento varía en función de la composición socioeconómica de la escuela, así como si la relación entre la ansiedad matemática individual y el rendimiento depende del clima de ansiedad promedio del establecimiento. Estas interacciones permiten evaluar si ciertos entornos escolares amplifican o amortiguan los efectos de las desventajas socioeconómicas y de la ansiedad matemática sobre el desempeño en Matemática, articulando así los efectos individuales y contextuales en una perspectiva plenamente multinivel [@Aguinis2013; @Fairbrother2014].
+Dada la relevancia teórica de los mecanismos de desigualdad y estratificación escolar, se estiman modelos con interacciones entre niveles para analizar posibles efectos de moderación [@Hayes2022; @Hox2017]. En particular, se explora si la asociación entre el origen social individual y el rendimiento varía en función de la composición socioeconómica de la escuela, así como si la relación entre la ansiedad matemática individual y el rendimiento depende del clima de ansiedad promedio del establecimiento. Estas interacciones permiten evaluar si ciertos entornos escolares amplifican o amortiguan los efectos de las desventajas socioeconómicas y de la ansiedad matemática sobre el desempeño en Matemática, articulando así los efectos individuales y contextuales en una perspectiva plenamente multinivel [@Aguinis2013; @Fairbrother2014].
 
-A continuación, se presenta el modelo multinivel propuesto que integra los efectos individuales y contextuales del nivel socioeconómico y la ansiedad ante Matemática sobre el rendimiento.
+Finalmente, y con el propósito de explorar la heterogeneidad en el efecto de la ansiedad matemática entre escuelas, se estiman modelos multinivel con pendientes aleatorias para la ansiedad matemática a nivel individual, permitiendo que la asociación entre ansiedad matemática y rendimiento en Matemática varíe entre establecimientos [@RaudenbushBryk2002; @SnijdersBosker2012]. La comparación entre modelos con y sin pendientes aleatorias, mediante pruebas de razón de verosimilitudes y test de desvianza, permite evaluar si la inclusión de estas pendientes mejora significativamente el ajuste del modelo [@Bell2019].
+
+Sobre esta base, se incorporan interacciones de segundo orden entre la ansiedad matemática individual y características del contexto escolar (nivel socioeconómico promedio del establecimiento, clima promedio de ansiedad y tipo de escuela). Esto permite analizar si el efecto negativo de la ansiedad sobre el rendimiento es más intenso en ciertos tipos de escuelas, por ejemplo, en establecimientos con alta concentración de estudiantes de nivel socioeconómico bajo o con climas emocionales más ansiosos, modelando así la manera en que los contextos escolares pueden amplificar o atenuar el impacto de la ansiedad matemática sobre el desempeño [@Aguinis2013; @EndersTofighi2007; @Hayes2022].
+
+A continuación, se presenta el modelo multinivel propuesto que integra los efectos individuales y contextuales del nivel socioeconómico y la ansiedad ante Matemática sobre el rendimiento con pendientes aleatorias e interacciones cruzadas
 
 **Figura 3.3:** Modelo multinivel
 
 $$
-\large
 \begin{aligned}
 Y_{ij} &= \gamma_{00}
 + \gamma_{10} ESCS_{ij}
 + \gamma_{20} ANXMAT_{ij}
 + \gamma_{01} \overline{ESCS}_{j}
-+ \gamma_{02} \overline{ANXMAT}_{j} \\
++ \gamma_{02} \overline{ANXMAT}_{j}
++ \gamma_{03} TYPE_{j} \\
 &\quad
 + \gamma_{11}\, ESCS_{ij}\,\overline{ESCS}_{j}
-+ \gamma_{21}\, ANXMAT_{ij}\,\overline{ANXMAT}_{j} \\
++ \gamma_{21}\, ANXMAT_{ij}\,\overline{ANXMAT}_{j}
++ \gamma_{23}\, ANXMAT_{ij}\,TYPE_{j} \\
 &\quad
-+ \beta' W_{ij}
-+ \delta' V_{j}
++ \mathbf{W}_{ij}^{\top}\beta
++ \mathbf{V}_{j}^{\top}\delta \\
+&\quad
 + u_{0j}
 + u_{1j} ESCS_{ij}
 + u_{2j} ANXMAT_{ij}
-+ e_{ij}
++ e_{ij}.
 \end{aligned}
 $$ 
